@@ -16,7 +16,7 @@ TagManager:
   - Player
   - Ground
   - Background
-  - 
+  - Wall
   - 
   - 
   - 
@@ -46,6 +46,9 @@ TagManager:
     locked: 0
   - name: Platform
     uniqueID: 1164957529
+    locked: 0
+  - name: Wall
+    uniqueID: 1935914991
     locked: 0
   - name: Player
     uniqueID: 2624540569

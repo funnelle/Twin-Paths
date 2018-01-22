@@ -10,9 +10,11 @@ public class RogueController : MonoBehaviour {
 	//general character knowledge
 	bool facingRight = true;
 	public float maxSpeed = 10f;
+	public LayerMask wall;
 
 	//dash variables
 	bool dash = false;
+	bool movementDisabled = false;
 	public Vector2 dashDistance;
 	public float dashTime;
 
@@ -37,7 +39,10 @@ public class RogueController : MonoBehaviour {
 	void Update() {
 		//get dash input
 		if (Input.GetButtonDown(dashButton) && dash != true) {
+			rb2d.velocity = new Vector2 (0,0);
+			movementDisabled = true;
 			anim.SetBool ("Dash", true);
+			SoundManagerScript.PlaySound ("Rogue Dash V3");
 			dash = true;
 			if (facingRight) {
 				StartCoroutine (MoveOverSeconds (rogue, rb2d.position + dashDistance, dashTime));
@@ -45,7 +50,7 @@ public class RogueController : MonoBehaviour {
 			else if (!facingRight) {
 				StartCoroutine (MoveOverSeconds (rogue, rb2d.position - dashDistance, dashTime));
 			}
-			dash = false;
+			movementDisabled = false;
 		}
 
 		//get jump input
@@ -53,24 +58,43 @@ public class RogueController : MonoBehaviour {
 			anim.SetBool ("Ground", false);
 			rb2d.AddForce (new Vector2 (0, jumpForce));
 		}
+
+		//Raycast to check for objects
+		Vector2 position = transform.position;
+		Vector2 direction = Vector2.right;
+		if (facingRight) {
+			direction = Vector2.right;
+		}
+		else if (!facingRight) {
+			direction = Vector2.left;
+		}
+		float distance = 0.2f;
+
+		RaycastHit2D hit = Physics2D.Raycast (position, direction, distance, wall);
+
+		if (hit.collider != null) {
+			Debug.Log(hit.collider.name);
+			dash = false;
+		}
 	}
 
 	void FixedUpdate() {
 		grounded = Physics2D.OverlapCircle (groundCheck.position, groundRadius, whatIsGround);
 		anim.SetBool ("Ground", grounded);
 
-		float moveHorizontal = Input.GetAxis (horizontalButton);
+		if (movementDisabled == false) {
+			float moveHorizontal = Input.GetAxis (horizontalButton);
 
-		rb2d.velocity = new Vector2 (moveHorizontal * maxSpeed, rb2d.velocity.y);
+			rb2d.velocity = new Vector2 (moveHorizontal * maxSpeed, rb2d.velocity.y);
 
-		if (moveHorizontal > 0 && !facingRight) {
-			Flip ();
-		}
-		else if (moveHorizontal < 0 && facingRight) {
-			Flip ();
+			if (moveHorizontal > 0 && !facingRight) {
+				Flip ();
+			} else if (moveHorizontal < 0 && facingRight) {
+				Flip ();
+			}
 		}
 	}
-
+		
 	void Flip() {
 		facingRight = !facingRight;
 		Vector3 theScale = transform.localScale;
@@ -87,8 +111,16 @@ public class RogueController : MonoBehaviour {
 			objectToMove.transform.position = Vector2.Lerp(startingPos, end, (elapsedTime / seconds));
 			elapsedTime += Time.deltaTime;
 			yield return new WaitForEndOfFrame();
+			if (dash == false) {
+				break;
+			}
 		}
-		objectToMove.transform.position = end;
+		if (dash == false) {
+			objectToMove.transform.position = transform.position;
+		} else {
+			objectToMove.transform.position = end;
+			dash = false;
+		}
 		anim.SetBool ("Dash", false);
 		rb2d.gravityScale = 1.0f;
 	}
