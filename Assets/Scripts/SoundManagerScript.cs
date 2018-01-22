@@ -14,16 +14,10 @@ public class SoundManagerScript : MonoBehaviour {
 
 		audioSrc = GetComponent<AudioSource> ();
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
 	public static void PlaySound (string clip) {
 		switch (clip) {
 		case "Rogue Dash V3":
-			Debug.Log ("Playing Dash");
 			audioSrc.PlayOneShot (rogueDashSound);
 			break;
 		case "Rogue Footstep":
