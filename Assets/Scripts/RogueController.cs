@@ -73,7 +73,6 @@ public class RogueController : MonoBehaviour {
 		RaycastHit2D hit = Physics2D.Raycast (position, direction, distance, wall);
 
 		if (hit.collider != null) {
-			Debug.Log(hit.collider.name);
 			dash = false;
 		}
 	}
