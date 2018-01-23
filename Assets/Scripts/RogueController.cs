@@ -14,6 +14,7 @@ public class RogueController : MonoBehaviour {
 
 	//dash variables
 	bool dash = false;
+	bool canDash = true;
 	bool movementDisabled = false;
 	public Vector2 dashDistance;
 	public float dashTime;
@@ -38,11 +39,12 @@ public class RogueController : MonoBehaviour {
 
 	void Update() {
 		//get dash input
-		if (Input.GetButtonDown(dashButton) && dash != true) {
+		if (Input.GetButtonDown(dashButton) && canDash && dash != true) {
 			rb2d.velocity = new Vector2 (0,0);
 			movementDisabled = true;
-			anim.SetBool ("Dash", true);
+			canDash = false;
 			SoundManagerScript.PlaySound ("Rogue Dash V3");
+			anim.SetBool ("Dash", true);
 			dash = true;
 			if (facingRight) {
 				StartCoroutine (MoveOverSeconds (rogue, rb2d.position + dashDistance, dashTime));
@@ -51,6 +53,10 @@ public class RogueController : MonoBehaviour {
 				StartCoroutine (MoveOverSeconds (rogue, rb2d.position - dashDistance, dashTime));
 			}
 			movementDisabled = false;
+		}
+
+		if (grounded) {
+			canDash = true;
 		}
 
 		//get jump input
@@ -69,7 +75,7 @@ public class RogueController : MonoBehaviour {
 			direction = Vector2.left;
 		}
 		float distance = 0.2f;
-
+		//Debug.DrawRay (position, direction, Color.green);
 		RaycastHit2D hit = Physics2D.Raycast (position, direction, distance, wall);
 
 		if (hit.collider != null) {
@@ -106,14 +112,19 @@ public class RogueController : MonoBehaviour {
 		float elapsedTime = 0;
 		Vector2 startingPos = objectToMove.transform.position;
 		rb2d.gravityScale = 0.0f;
+		//Debug.Log (dash);
 		while (elapsedTime < seconds) {
+			//Debug.Log (dash);
 			objectToMove.transform.position = Vector2.Lerp(startingPos, end, (elapsedTime / seconds));
 			elapsedTime += Time.deltaTime;
 			yield return new WaitForEndOfFrame();
 			if (dash == false) {
+				//Debug.Log ("breaking the while");
 				break;
 			}
 		}
+		//Debug.Log ("after while");
+		//Debug.Log (dash);
 		if (dash == false) {
 			objectToMove.transform.position = transform.position;
 		} else {
