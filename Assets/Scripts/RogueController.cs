@@ -74,7 +74,6 @@ public class RogueController : MonoBehaviour {
 			direction = Vector2.left;
 		}
 		float distance = 0.2f;
-		//Debug.DrawRay (position, direction, Color.green);
 		RaycastHit2D hit = Physics2D.Raycast (position, direction, distance, wall);
 
 		if (hit.collider != null) {
@@ -112,9 +111,7 @@ public class RogueController : MonoBehaviour {
 		Vector2 startingPos = objectToMove.transform.position;
 		rb2d.gravityScale = 0.0f;
 		bool dashSoundPlayable = true;
-		//Debug.Log (dash);
 		while (elapsedTime < seconds) {
-			//Debug.Log (dash);
 			if ((elapsedTime > 0) && (dashSoundPlayable)) {
 				SoundManagerScript.PlaySound ("Rogue Dash V3");
 				dashSoundPlayable = false;
@@ -123,12 +120,9 @@ public class RogueController : MonoBehaviour {
 			elapsedTime += Time.deltaTime;
 			yield return new WaitForEndOfFrame();
 			if (dash == false) {
-				//Debug.Log ("breaking the while");
 				break;
 			}
 		}
-		//Debug.Log ("after while");
-		//Debug.Log (dash);
 		if (dash == false) {
 			objectToMove.transform.position = transform.position;
 		} else {
