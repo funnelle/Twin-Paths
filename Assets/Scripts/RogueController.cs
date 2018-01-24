@@ -43,7 +43,6 @@ public class RogueController : MonoBehaviour {
 			rb2d.velocity = new Vector2 (0,0);
 			movementDisabled = true;
 			canDash = false;
-			SoundManagerScript.PlaySound ("Rogue Dash V3");
 			anim.SetBool ("Dash", true);
 			dash = true;
 			if (facingRight) {
@@ -112,9 +111,14 @@ public class RogueController : MonoBehaviour {
 		float elapsedTime = 0;
 		Vector2 startingPos = objectToMove.transform.position;
 		rb2d.gravityScale = 0.0f;
+		bool dashSoundPlayable = true;
 		//Debug.Log (dash);
 		while (elapsedTime < seconds) {
 			//Debug.Log (dash);
+			if ((elapsedTime > 0) && (dashSoundPlayable)) {
+				SoundManagerScript.PlaySound ("Rogue Dash V3");
+				dashSoundPlayable = false;
+			}
 			objectToMove.transform.position = Vector2.Lerp(startingPos, end, (elapsedTime / seconds));
 			elapsedTime += Time.deltaTime;
 			yield return new WaitForEndOfFrame();
