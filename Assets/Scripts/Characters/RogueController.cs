@@ -20,7 +20,7 @@ public class RogueController : MonoBehaviour {
 	public float dashTime;
 
 	//jumping variables
-	bool grounded = false;
+	public bool grounded = false;
 	float groundRadius = 0.2f;
 	public Transform groundCheck;
 	public LayerMask whatIsGround;
@@ -30,11 +30,13 @@ public class RogueController : MonoBehaviour {
 	public string horizontalButton = "Horizontal_P1";
 	public string jumpButton = "Jump";
 	public string dashButton = "Dash";
+	public string attackButton = "Attack";
 
 	void Start() {
 		rb2d = GetComponent<Rigidbody2D> ();
 		anim = GetComponent<Animator> ();
 		rogue = GameObject.Find ("RoguePlayer");
+
 	}
 
 	void Update() {
@@ -55,12 +57,14 @@ public class RogueController : MonoBehaviour {
 		}
 
 		if (grounded) {
+			anim.SetBool ("Jump", false);
 			canDash = true;
 		}
 
 		//get jump input
 		if ((dash == false) && grounded && Input.GetButtonDown(jumpButton)) {
 			anim.SetBool ("Ground", false);
+			anim.SetBool ("Jump", true);
 			rb2d.AddForce (new Vector2 (0, jumpForce));
 		}
 
@@ -79,6 +83,12 @@ public class RogueController : MonoBehaviour {
 		if (hit.collider != null) {
 			dash = false;
 		}
+
+		//attack
+		if (Input.GetButtonDown(attackButton)) {
+			Rogue_Attack attack = gameObject.GetComponentInChildren<Rogue_Attack> ();
+			attack.KnifeAttack ();
+		}
 	}
 
 	void FixedUpdate() {
@@ -88,8 +98,10 @@ public class RogueController : MonoBehaviour {
 		if (movementDisabled == false) {
 			float moveHorizontal = Input.GetAxis (horizontalButton);
 
-			rb2d.velocity = new Vector2 (moveHorizontal * maxSpeed, rb2d.velocity.y);
+			anim.SetFloat ("Walk", Mathf.Abs(moveHorizontal));
 
+			rb2d.velocity = new Vector2 (moveHorizontal * maxSpeed, rb2d.velocity.y);
+				
 			if (moveHorizontal > 0 && !facingRight) {
 				Flip ();
 			} else if (moveHorizontal < 0 && facingRight) {
