@@ -65,6 +65,7 @@ public class RogueController : MonoBehaviour {
 		if ((dash == false) && grounded && Input.GetButtonDown(jumpButton)) {
 			anim.SetBool ("Ground", false);
 			anim.SetBool ("Jump", true);
+			SoundManagerScript.PlaySound ("Rogue Jump");
 			rb2d.AddForce (new Vector2 (0, jumpForce));
 		}
 
@@ -98,9 +99,14 @@ public class RogueController : MonoBehaviour {
 		if (movementDisabled == false) {
 			float moveHorizontal = Input.GetAxis (horizontalButton);
 
-			anim.SetFloat ("Walk", Mathf.Abs(moveHorizontal));
-
 			rb2d.velocity = new Vector2 (moveHorizontal * maxSpeed, rb2d.velocity.y);
+
+			if (Mathf.Abs(rb2d.velocity.x) > 0.01f) {
+				anim.SetBool ("Walk", true);
+			}
+			else {
+				anim.SetBool ("Walk", false);
+			}
 				
 			if (moveHorizontal > 0 && !facingRight) {
 				Flip ();
@@ -117,8 +123,7 @@ public class RogueController : MonoBehaviour {
 		transform.localScale = theScale;
 	}
 
-	public IEnumerator MoveOverSeconds (GameObject objectToMove, Vector2 end, float seconds)
-	{
+	public IEnumerator MoveOverSeconds (GameObject objectToMove, Vector2 end, float seconds) {
 		float elapsedTime = 0;
 		Vector2 startingPos = objectToMove.transform.position;
 		rb2d.gravityScale = 0.0f;
@@ -144,6 +149,4 @@ public class RogueController : MonoBehaviour {
 		anim.SetBool ("Dash", false);
 		rb2d.gravityScale = 1.0f;
 	}
-		
-
 }
