@@ -212,7 +212,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 117422025}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.08, y: -1.66, z: 0}
+  m_LocalPosition: {x: 7.05, y: -2.29, z: 0}
   m_LocalScale: {x: 0.51787996, y: 0.57267, z: 1}
   m_Children: []
   m_Father: {fileID: 854501609}
@@ -704,7 +704,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 636291372}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.32, y: -1.66, z: 0}
+  m_LocalPosition: {x: 4.29, y: -2.29, z: 0}
   m_LocalScale: {x: 0.51787996, y: 0.57267, z: 1}
   m_Children: []
   m_Father: {fileID: 854501609}
@@ -1996,7 +1996,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1929012545}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.69, y: -1.66, z: 0}
+  m_LocalPosition: {x: 1.74, y: -2.27, z: 0}
   m_LocalScale: {x: 0.51788014, y: 0.5726665, z: 1}
   m_Children: []
   m_Father: {fileID: 854501609}
@@ -2294,7 +2294,7 @@ MonoBehaviour:
   whatIsGround:
     serializedVersion: 2
     m_Bits: 4294967039
-  jumpForce: 700
+  jumpForce: 550
   horizontalButton: Horizontal_P1
   jumpButton: Jump
   dashButton: Dash
