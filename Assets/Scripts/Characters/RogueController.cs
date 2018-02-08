@@ -9,7 +9,8 @@ public class RogueController : MonoBehaviour {
 
 	//general character knowledge
 	bool facingRight = true;
-	public float maxSpeed = 10f;
+	public float maxSpeed;
+	public float health;
 	public LayerMask wall;
 
 	//dash variables
@@ -31,6 +32,7 @@ public class RogueController : MonoBehaviour {
 	public string jumpButton = "Jump";
 	public string dashButton = "Dash";
 	public string attackButton = "Attack";
+	public string damageButton = "Ouch";
 
 	void Start() {
 		rb2d = GetComponent<Rigidbody2D> ();
@@ -90,6 +92,11 @@ public class RogueController : MonoBehaviour {
 			Rogue_Attack attack = gameObject.GetComponentInChildren<Rogue_Attack> ();
 			attack.KnifeAttack ();
 		}
+
+		//Test damage taken
+		if (Input.GetButtonDown(damageButton)) {
+			TakeDamage ();
+		}
 	}
 
 	void FixedUpdate() {
@@ -148,5 +155,20 @@ public class RogueController : MonoBehaviour {
 		}
 		anim.SetBool ("Dash", false);
 		rb2d.gravityScale = 1.0f;
+	}
+
+	void TakeDamage() {
+		//play death sound
+		//play death animation
+		health -= 1;
+
+		if (health == 0) {
+			rb2d.AddForce (new Vector2 (rb2d.velocity.x, (jumpForce/2)));
+			rogue.GetComponent<BoxCollider2D> ().enabled = false;
+		}
+	}
+
+	void OnBecameInvisible() {
+		Destroy (rogue);
 	}
 }

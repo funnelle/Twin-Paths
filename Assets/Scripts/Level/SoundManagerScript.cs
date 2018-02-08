@@ -9,9 +9,9 @@ public class SoundManagerScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		rogueDashSound = Resources.Load<AudioClip> ("Rogue Dash V3");
-		rogueWalkSound = Resources.Load<AudioClip> ("Rogue Footstep");
-		rogueJumpSound = Resources.Load<AudioClip> ("Rogue Jump");
+		rogueDashSound = Resources.Load<AudioClip> ("Audio/Character Sounds/Rogue/Rogue Dash V4");
+		rogueWalkSound = Resources.Load<AudioClip> ("Audio/Character Sounds/Rogue/Rogue Footstep");
+		rogueJumpSound = Resources.Load<AudioClip> ("Audio/Character Sounds/Rogue/Rogue Jump");
 
 		audioSrc = GetComponent<AudioSource> ();
 	}

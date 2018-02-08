@@ -197,7 +197,6 @@ GameObject:
   - component: {fileID: 117422030}
   - component: {fileID: 117422029}
   - component: {fileID: 117422028}
-  - component: {fileID: 117422027}
   m_Layer: 9
   m_Name: Platform_1 (2)
   m_TagString: Untagged
@@ -218,18 +217,6 @@ Transform:
   m_Father: {fileID: 854501609}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &117422027
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 117422025}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40ce80e6dbd85492ea5f82e87b34e09c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fallDelay: 3
 --- !u!61 &117422028
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -689,7 +676,6 @@ GameObject:
   - component: {fileID: 636291377}
   - component: {fileID: 636291376}
   - component: {fileID: 636291375}
-  - component: {fileID: 636291374}
   m_Layer: 9
   m_Name: Platform_1 (1)
   m_TagString: Untagged
@@ -710,18 +696,6 @@ Transform:
   m_Father: {fileID: 854501609}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &636291374
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 636291372}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40ce80e6dbd85492ea5f82e87b34e09c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fallDelay: 3
 --- !u!61 &636291375
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1981,7 +1955,6 @@ GameObject:
   - component: {fileID: 1929012547}
   - component: {fileID: 1929012550}
   - component: {fileID: 1929012548}
-  - component: {fileID: 1929012549}
   m_Layer: 9
   m_Name: Platform_1
   m_TagString: Untagged
@@ -2071,18 +2044,6 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.92, y: 0.16595894}
   m_EdgeRadius: 0
---- !u!114 &1929012549
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1929012545}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40ce80e6dbd85492ea5f82e87b34e09c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fallDelay: 3
 --- !u!50 &1929012550
 Rigidbody2D:
   serializedVersion: 4

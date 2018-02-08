@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Rogue_Attack : MonoBehaviour {
 	BoxCollider2D knife;
-	public float attackTime = 0.2f;
+	public float attackTime;
 
 	void Awake() {
 		knife = GetComponent<BoxCollider2D> ();
