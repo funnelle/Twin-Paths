@@ -5,9 +5,11 @@ using UnityEngine;
 public class Rogue_Attack : MonoBehaviour {
 	BoxCollider2D knife;
 	public float attackTime;
+	GameObject knight;
 
 	void Awake() {
 		knife = GetComponent<BoxCollider2D> ();
+		knight = GameObject.Find ("KnightPlayer");
 	}
 
 	public void KnifeAttack() {
@@ -18,5 +20,12 @@ public class Rogue_Attack : MonoBehaviour {
 	private IEnumerator AttackLength (float attackTime) {
 		yield return new WaitForSeconds (attackTime);
 		knife.enabled = false;
+	}
+
+	void OnTriggerEnter2D(Collider2D coll) {
+		KnightController damage = knight.GetComponent<KnightController> ();
+		if (coll.gameObject.tag == "Player") {
+			damage.TakeDamage ();
+		}
 	}
 }

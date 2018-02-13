@@ -6,6 +6,7 @@ public class RogueController : MonoBehaviour {
 	private Rigidbody2D rb2d;
 	private Animator anim;
 	private GameObject rogue;
+	private GameObject knight;
 
 	//general character knowledge
 	bool facingRight = true;
@@ -38,6 +39,7 @@ public class RogueController : MonoBehaviour {
 		rb2d = GetComponent<Rigidbody2D> ();
 		anim = GetComponent<Animator> ();
 		rogue = GameObject.Find ("RoguePlayer");
+		knight = GameObject.Find ("KnightPlayer");
 
 	}
 
@@ -48,6 +50,7 @@ public class RogueController : MonoBehaviour {
 			movementDisabled = true;
 			canDash = false;
 			anim.SetBool ("Dash", true);
+			Physics2D.IgnoreCollision(GetComponent<BoxCollider2D>(), knight.GetComponent<BoxCollider2D>());
 			dash = true;
 			if (facingRight) {
 				StartCoroutine (MoveOverSeconds (rogue, rb2d.position + dashDistance, dashTime));
@@ -155,9 +158,10 @@ public class RogueController : MonoBehaviour {
 		}
 		anim.SetBool ("Dash", false);
 		rb2d.gravityScale = 1.0f;
+		Physics2D.IgnoreCollision(GetComponent<BoxCollider2D>(), knight.GetComponent<BoxCollider2D>(), false);
 	}
 
-	void TakeDamage() {
+	public void TakeDamage() {
 		//play death sound
 		//play death animation
 		health -= 1;
