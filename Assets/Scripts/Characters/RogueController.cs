@@ -53,6 +53,7 @@ public class RogueController : MonoBehaviour {
 			canDash = false;
 			anim.SetBool ("Dash", true);
 			Physics2D.IgnoreCollision(GetComponent<BoxCollider2D>(), knight.GetComponent<BoxCollider2D>());
+			Physics2D.IgnoreCollision(GetComponent<BoxCollider2D>(), knight.GetComponentInChildren<BoxCollider2D>());
 			dash = true;
 			if (facingRight) {
 				StartCoroutine (MoveOverSeconds (rogue, rb2d.position + dashDistance, dashTime));
@@ -161,16 +162,18 @@ public class RogueController : MonoBehaviour {
 		anim.SetBool ("Dash", false);
 		rb2d.gravityScale = 1.0f;
 		Physics2D.IgnoreCollision(GetComponent<BoxCollider2D>(), knight.GetComponent<BoxCollider2D>(), false);
+		Physics2D.IgnoreCollision(GetComponent<BoxCollider2D>(), knight.GetComponentInChildren<BoxCollider2D>(), false);
 	}
 
 	public void TakeDamage() {
 		//play death sound
 		//play death animation
-		health -= 1;
-
-		if (health == 0) {
-			rb2d.AddForce (new Vector2 (rb2d.velocity.x, (jumpForce/2)));
-			rogue.GetComponent<BoxCollider2D> ().enabled = false;
+		if (dash != true) {
+			health -= 1;
+			if (health == 0) {
+				rb2d.AddForce (new Vector2 (rb2d.velocity.x, (jumpForce / 2)));
+				rogue.GetComponent<BoxCollider2D> ().enabled = false;
+			}
 		}
 	}
 
