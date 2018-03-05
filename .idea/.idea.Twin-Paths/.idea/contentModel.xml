@@ -24,8 +24,8 @@
             <e p="FallingPlatforms.cs" t="Include" />
             <e p="SoundManagerScript.cs" t="Include" />
           </e>
-          <e p="LevelController.cs" t="Include" />
           <e p="LoadSceneOnClick.cs" t="Include" />
+          <e p="RKLevelController.cs" t="Include" />
           <e p="screenSize.cs" t="Include" />
         </e>
       </e>
