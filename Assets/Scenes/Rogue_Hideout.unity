@@ -255,7 +255,7 @@ Rigidbody2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 60898206}
-  m_BodyType: 2
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -2472,6 +2472,7 @@ GameObject:
   - component: {fileID: 465001152}
   - component: {fileID: 465001151}
   - component: {fileID: 465001150}
+  - component: {fileID: 465001154}
   m_Layer: 0
   m_Name: Platform-RogueHideout
   m_TagString: Untagged
@@ -2527,8 +2528,8 @@ Rigidbody2D:
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 20
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
+  m_LinearDrag: 2
+  m_AngularDrag: 0.25
   m_GravityScale: 1
   m_Material: {fileID: 0}
   m_Interpolate: 0
@@ -2604,6 +2605,24 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!232 &465001154
+DistanceJoint2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 465001148}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 60898207}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_AutoConfigureConnectedAnchor: 0
+  m_Anchor: {x: 0, y: 0}
+  m_ConnectedAnchor: {x: 0, y: 1.1854011}
+  m_AutoConfigureDistance: 1
+  m_Distance: 2.945456
+  m_MaxDistanceOnly: 1
 --- !u!1 &500743121
 GameObject:
   m_ObjectHideFlags: 0
@@ -11580,7 +11599,6 @@ GameObject:
   - component: {fileID: 1874314603}
   - component: {fileID: 1874314600}
   - component: {fileID: 1874314602}
-  - component: {fileID: 1874314601}
   m_Layer: 0
   m_Name: ChainLinks-RogueHideout_0
   m_TagString: Untagged
@@ -11608,24 +11626,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!232 &1874314601
-DistanceJoint2D:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1874314599}
-  m_Enabled: 1
-  serializedVersion: 4
-  m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 465001151}
-  m_BreakForce: Infinity
-  m_BreakTorque: Infinity
-  m_AutoConfigureConnectedAnchor: 0
-  m_Anchor: {x: 0, y: 0.06500006}
-  m_ConnectedAnchor: {x: 0, y: 0}
-  m_AutoConfigureDistance: 1
-  m_Distance: 2.945004
-  m_MaxDistanceOnly: 1
 --- !u!233 &1874314602
 HingeJoint2D:
   m_ObjectHideFlags: 0
@@ -11635,12 +11635,12 @@ HingeJoint2D:
   m_Enabled: 1
   serializedVersion: 4
   m_EnableCollision: 0
-  m_ConnectedRigidBody: {fileID: 60898207}
+  m_ConnectedRigidBody: {fileID: 0}
   m_BreakForce: Infinity
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0.06500006}
-  m_ConnectedAnchor: {x: 0.012999773, y: 1.1850001}
+  m_ConnectedAnchor: {x: 3.4929998, y: 0.49208045}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 200

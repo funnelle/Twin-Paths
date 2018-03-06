@@ -170,7 +170,7 @@ public class RogueController : MonoBehaviour {
 		//play death animation
 		if (dash != true) {
 			health -= 1;
-			if (health == 0) {
+			if (health <= 0) {
 				rb2d.AddForce (new Vector2 (rb2d.velocity.x, (jumpForce / 2)));
 				rogue.GetComponent<BoxCollider2D> ().enabled = false;
 			}
