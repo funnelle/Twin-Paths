@@ -1551,20 +1551,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxSpeed: 1
   health: 2
-  wall:
-    serializedVersion: 2
-    m_Bits: 2048
-  dashDistance: {x: 0, y: 0}
-  dashTime: 0
-  grounded: 1
-  groundCheck: {fileID: 1351253280}
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 4294967039
   jumpForce: 1
   horizontalButton: Horizontal_p2
   jumpButton: Jump_p2
-  dashButton: Dash_p2
   attackButton: Attack_p2
   damageButton: Ouch_p2
 --- !u!1 &262203248

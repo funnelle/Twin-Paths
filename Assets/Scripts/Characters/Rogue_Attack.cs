@@ -24,7 +24,7 @@ public class Rogue_Attack : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D coll) {
 		KnightController damage = knight.GetComponent<KnightController> ();
-		if (coll.gameObject.tag == "Player") {
+		if (coll.gameObject.tag == "Knight") {
 			damage.TakeDamage ();
 		}
 	}
