@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlatformLeg : MonoBehaviour {
-	BoxCollider2D leg;
-	// Use this for initialization
+	private BoxCollider2D leg;
+
 	void Awake () {
 		leg = GetComponent<BoxCollider2D> ();
 	}

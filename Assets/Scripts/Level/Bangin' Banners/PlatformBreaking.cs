@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlatformBreaking : MonoBehaviour {
-	BoxCollider2D leftLeg;
-	BoxCollider2D rightLeg;
-	Rigidbody2D rb2d;
+	private BoxCollider2D leftLeg;
+	private BoxCollider2D rightLeg;
+	private Rigidbody2D rb2d;
 
 	// Use this for initialization
 	void Awake () {
