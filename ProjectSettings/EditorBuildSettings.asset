@@ -9,5 +9,17 @@ EditorBuildSettings:
     path: Assets/Scenes/StartScreen.unity
     guid: 69b7e09ea29bdd54689ae463df3bf185
   - enabled: 1
-    path: Assets/Scenes/Castle.unity
+    path: Assets/Scenes/Throne_Room.unity
+    guid: 5042db68953244744b5327eeffa0faee
+  - enabled: 1
+    path: Assets/Scenes/Bangin' Banners.unity
     guid: 421182ae0a34340bfa89c966d74e1954
+  - enabled: 1
+    path: Assets/Scenes/Courtyard.unity
+    guid: 04e6977c76e134533b32d89a39ca04c6
+  - enabled: 1
+    path: Assets/Scenes/Tavern.unity
+    guid: 9d1ac5e6fbdd84501a9a7e43bedc63bb
+  - enabled: 1
+    path: Assets/Scenes/Rogue_Hideout.unity
+    guid: 1862106f1c2a74328bc6caddc7354853
