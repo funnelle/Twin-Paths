@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d2bed01f-49bc-4d1a-bbe1-0d3e07e6eb5a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Twin-Paths/.idea/contentModel.xml" afterPath="$PROJECT_DIR$/.idea/.idea.Twin-Paths/.idea/contentModel.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Twin-Paths/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.Twin-Paths/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Bangin' Banners.unity" afterPath="$PROJECT_DIR$/Assets/Scenes/Bangin' Banners.unity" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Courtyard.unity" afterPath="$PROJECT_DIR$/Assets/Scenes/Courtyard.unity" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Rogue_Hideout.unity" afterPath="$PROJECT_DIR$/Assets/Scenes/Rogue_Hideout.unity" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/StartScreen.unity" afterPath="$PROJECT_DIR$/Assets/Scenes/StartScreen.unity" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Tavern.unity" afterPath="$PROJECT_DIR$/Assets/Scenes/Tavern.unity" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Throne_Room.unity" afterPath="$PROJECT_DIR$/Assets/Scenes/Throne_Room.unity" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/RKLevelController.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/RKLevelController.cs" />
-    </list>
+    <list default="true" id="d2bed01f-49bc-4d1a-bbe1-0d3e07e6eb5a" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -39,8 +29,8 @@
       <file leaf-file-name="RKLevelController.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/RKLevelController.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="509">
-              <caret line="106" column="47" lean-forward="false" selection-start-line="106" selection-start-column="47" selection-end-line="106" selection-end-column="47" />
+            <state relative-caret-position="659">
+              <caret line="113" column="74" lean-forward="true" selection-start-line="113" selection-start-column="74" selection-end-line="113" selection-end-column="74" />
               <folding>
                 <marker date="1521945823772" expanded="true" signature="6:101" ph="..." />
                 <marker date="1521945823772" expanded="true" signature="151:2625" ph="{...}" />
@@ -162,12 +152,12 @@
       <workItem from="1519606247126" duration="9000" />
       <workItem from="1520196312399" duration="20000" />
       <workItem from="1520203388387" duration="8138000" />
-      <workItem from="1521941989366" duration="3833000" />
+      <workItem from="1521941989366" duration="4499000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13728000" />
+    <option name="totallyTimeSpent" value="14394000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -327,8 +317,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/RKLevelController.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="509">
-          <caret line="106" column="47" lean-forward="false" selection-start-line="106" selection-start-column="47" selection-end-line="106" selection-end-column="47" />
+        <state relative-caret-position="659">
+          <caret line="113" column="74" lean-forward="true" selection-start-line="113" selection-start-column="74" selection-end-line="113" selection-end-column="74" />
           <folding>
             <marker date="1521945823772" expanded="true" signature="6:101" ph="..." />
             <marker date="1521945823772" expanded="true" signature="151:2625" ph="{...}" />
