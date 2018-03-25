@@ -21,8 +21,11 @@
             <e p="RogueController.cs" t="Include" />
           </e>
           <e p="Level" t="Include">
-            <e p="FallingPlatforms.cs" t="Include" />
-            <e p="SoundManagerScript.cs" t="Include" />
+            <e p="Bangin' Banners" t="Include">
+              <e p="PlatformBreaking.cs" t="Include" />
+              <e p="PlatformLeg.cs" t="Include" />
+              <e p="SoundManagerScript.cs" t="Include" />
+            </e>
           </e>
           <e p="LoadSceneOnClick.cs" t="Include" />
           <e p="RKLevelController.cs" t="Include" />
