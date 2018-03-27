@@ -31,7 +31,7 @@ public class  RKLevelController : MonoBehaviour {
 		_rkScenesList.Add("Tavern");
 		_rkScenesList.Add("Courtyard");
 		_rkScenesList.Add("Bangin' Banners");
-		_rkScenesList.Add("Throneroom");
+		_rkScenesList.Add("Throne_Room");
 
 		_currentSceneIndex = _rkScenesList.FindIndex(s => s.Equals(_currentSceneName));
 
