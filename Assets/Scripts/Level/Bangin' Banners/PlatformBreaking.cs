@@ -19,6 +19,7 @@ public class PlatformBreaking : MonoBehaviour {
 		if ((leftLeg.isActiveAndEnabled == false) && (rightLeg.isActiveAndEnabled == false)) {
 			//play destruction animation
 			Debug.Log("Platform Broke!");
+			rb2d.bodyType = RigidbodyType2D.Dynamic;
 		}
 	}
 }

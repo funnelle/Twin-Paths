@@ -156,6 +156,11 @@ Prefab:
       propertyPath: m_Name
       value: Swinging_Platform_left
       objectReference: {fileID: 0}
+    - target: {fileID: 61598758639267408, guid: ad0ec91e479a14cde8d7ff5cd1411aed,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad0ec91e479a14cde8d7ff5cd1411aed, type: 2}
   m_IsPrefabParent: 0
@@ -311,9 +316,32 @@ Prefab:
       propertyPath: m_Name
       value: Swinging_Platform_right
       objectReference: {fileID: 0}
+    - target: {fileID: 61598758639267408, guid: ad0ec91e479a14cde8d7ff5cd1411aed,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: ad0ec91e479a14cde8d7ff5cd1411aed, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &489895765 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1444991836269286, guid: ad0ec91e479a14cde8d7ff5cd1411aed,
+    type: 2}
+  m_PrefabInternal: {fileID: 470013769}
+--- !u!114 &489895774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 489895765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5ae6ed7973fc457592a737b77d81e6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  knight: {fileID: 1819895310}
+  hitForce: 3000
 --- !u!1 &606122967
 GameObject:
   m_ObjectHideFlags: 0
@@ -579,6 +607,19 @@ Prefab:
     - target: {fileID: 4255516076854988, guid: 9f92d9c060dd64e82b9dae7690a3d022, type: 2}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 61743326188293618, guid: 9f92d9c060dd64e82b9dae7690a3d022,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4032827572749858, guid: 9f92d9c060dd64e82b9dae7690a3d022, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 4032827572749858, guid: 9f92d9c060dd64e82b9dae7690a3d022, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.59
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9f92d9c060dd64e82b9dae7690a3d022, type: 2}
@@ -1063,6 +1104,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1819895310 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1951131795465712, guid: 9f92d9c060dd64e82b9dae7690a3d022,
+    type: 2}
+  m_PrefabInternal: {fileID: 1128454687}
 --- !u!1 &1839333145
 GameObject:
   m_ObjectHideFlags: 0
@@ -1162,3 +1208,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.0101442, y: 1.0015455}
   m_EdgeRadius: 0
+--- !u!1 &1912746483 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1444991836269286, guid: ad0ec91e479a14cde8d7ff5cd1411aed,
+    type: 2}
+  m_PrefabInternal: {fileID: 124680205}
+--- !u!114 &1912746492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1912746483}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5ae6ed7973fc457592a737b77d81e6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  knight: {fileID: 1819895310}
+  hitForce: 3000
