@@ -41,6 +41,8 @@ GameObject:
   - component: {fileID: 233474909163227466}
   - component: {fileID: 233160449288777582}
   - component: {fileID: 61282620343605924}
+  - component: {fileID: 114344326296944992}
+  - component: {fileID: 114117523657093058}
   m_Layer: 0
   m_Name: Platform-RogueHideout
   m_TagString: Untagged
@@ -282,7 +284,7 @@ BoxCollider2D:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1732604371719572}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
@@ -301,6 +303,32 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1.1099437, y: 0.14122784}
   m_EdgeRadius: 0
+--- !u!114 &114117523657093058
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1444991836269286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5ae6ed7973fc457592a737b77d81e6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  knight: {fileID: 0}
+  hitForce: 4000
+--- !u!114 &114344326296944992
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1444991836269286}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5ae6ed7973fc457592a737b77d81e6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  knight: {fileID: 0}
+  hitForce: 4000
 --- !u!212 &212314625202629364
 SpriteRenderer:
   m_ObjectHideFlags: 1

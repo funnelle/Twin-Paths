@@ -15,6 +15,7 @@ public class RogueController : MonoBehaviour {
 	public float maxSpeed;
 	public float health;
 	public LayerMask wall;
+	public LayerMask Enemy;
 
 	//dash variables
 	bool dash = false;
@@ -94,10 +95,10 @@ public class RogueController : MonoBehaviour {
 		}
 
 		//attack
-		if (Input.GetButtonDown(attackButton)) {
+		/*if (Input.GetButtonDown(attackButton)) {
 			Rogue_Attack attack = gameObject.GetComponentInChildren<Rogue_Attack> ();
 			attack.KnifeAttack ();
-		}
+		}*/
 
 		//Test damage taken
 		if (Input.GetButtonDown(damageButton)) {
@@ -126,6 +127,23 @@ public class RogueController : MonoBehaviour {
 			} else if (moveHorizontal < 0 && facingRight) {
 				Flip ();
 			}
+		}
+
+		//attack
+		if (Input.GetButtonDown (attackButton)) {
+		
+			//Attack with raycast
+			Vector2 position = transform.position;
+			position -= new Vector2 (0, 0.25f);
+			Vector2 direction = Vector2.right;
+			if (facingRight) {
+				direction = Vector2.right;
+			} else if (!facingRight) {
+				direction = Vector2.left;
+			}
+			float distance = 0.5f;
+			RaycastHit2D hit = Physics2D.Raycast (position, direction, distance, Enemy);
+			Debug.DrawRay (position, new Vector2 (distance, 0), Color.red);
 		}
 	}
 		

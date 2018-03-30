@@ -29,6 +29,7 @@ public class Knight_Attack : MonoBehaviour {
 		Debug.Log ("Hit");
 		RogueController damage = rogue.GetComponent<RogueController> ();
 		if (coll.gameObject.tag == "Rogue") {
+			Debug.Log ("Deal damage to Rogue");
 			damage.TakeDamage ();
 		}
 	}
