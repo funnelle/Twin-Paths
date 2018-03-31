@@ -15,7 +15,11 @@ public class RogueController : MonoBehaviour {
 	public float maxSpeed;
 	public float health;
 	public LayerMask wall;
+
+	//attacking variables 
 	public LayerMask Enemy;
+	public float attackTime;
+	public bool canAttack = true;
 
 	//dash variables
 	bool dash = false;
@@ -43,7 +47,6 @@ public class RogueController : MonoBehaviour {
 		anim = GetComponent<Animator> ();
 		rogue = GameObject.Find ("RoguePlayer");
 		knight = GameObject.Find ("KnightPlayer");
-
 	}
 
 	void Update() {
@@ -72,13 +75,12 @@ public class RogueController : MonoBehaviour {
 
 		//get jump input
 		if ((dash == false) && grounded && Input.GetButtonDown(jumpButton)) {
-			anim.SetBool ("Ground", false);
 			anim.SetBool ("Jump", true);
 			SoundManagerScript.PlaySound ("Rogue Jump");
 			rb2d.AddForce (new Vector2 (0, jumpForce));
 		}
 
-		//Raycast to check for objects
+		//Raycast to check for map edges
 		Vector2 position = transform.position;
 		Vector2 direction = Vector2.right;
 		if (facingRight) {
@@ -94,12 +96,6 @@ public class RogueController : MonoBehaviour {
 			dash = false;
 		}
 
-		//attack
-		/*if (Input.GetButtonDown(attackButton)) {
-			Rogue_Attack attack = gameObject.GetComponentInChildren<Rogue_Attack> ();
-			attack.KnifeAttack ();
-		}*/
-
 		//Test damage taken
 		if (Input.GetButtonDown(damageButton)) {
 			TakeDamage ();
@@ -108,8 +104,8 @@ public class RogueController : MonoBehaviour {
 
 	void FixedUpdate() {
 		grounded = Physics2D.OverlapCircle (groundCheck.position, groundRadius, whatIsGround);
-		anim.SetBool ("Ground", grounded);
 
+		//movement code
 		if (movementDisabled == false) {
 			float moveHorizontal = Input.GetAxis (horizontalButton);
 
@@ -130,20 +126,10 @@ public class RogueController : MonoBehaviour {
 		}
 
 		//attack
-		if (Input.GetButtonDown (attackButton)) {
-		
-			//Attack with raycast
-			Vector2 position = transform.position;
-			position -= new Vector2 (0, 0.25f);
-			Vector2 direction = Vector2.right;
-			if (facingRight) {
-				direction = Vector2.right;
-			} else if (!facingRight) {
-				direction = Vector2.left;
-			}
-			float distance = 0.5f;
-			RaycastHit2D hit = Physics2D.Raycast (position, direction, distance, Enemy);
-			Debug.DrawRay (position, new Vector2 (distance, 0), Color.red);
+		if (Input.GetButtonDown (attackButton) && (canAttack == true)) {
+			canAttack = false;
+			Debug.Log ("Attacking");
+			StartCoroutine(AttackLength (attackTime));
 		}
 	}
 		
@@ -181,6 +167,30 @@ public class RogueController : MonoBehaviour {
 		rb2d.gravityScale = 1.0f;
 		Physics2D.IgnoreCollision(GetComponent<BoxCollider2D>(), knight.GetComponent<BoxCollider2D>(), false);
 		Physics2D.IgnoreCollision(GetComponent<BoxCollider2D>(), knight.GetComponentInChildren<BoxCollider2D>(), false);
+	}
+
+	private IEnumerator AttackLength (float attackTime) {
+		//Attack with raycast
+		Vector2 position = transform.position;
+		position -= new Vector2 (0, 0.25f);
+		Vector2 direction = Vector2.right;
+		if (facingRight) {
+			direction = Vector2.right;
+		} else if (!facingRight) {
+			direction = Vector2.left;
+		}
+		float distance = 0.5f;
+		RaycastHit2D hit = Physics2D.Raycast (position, direction, distance, Enemy);
+
+		if (hit.collider != null) {
+			KnightController knightHit = knight.GetComponent<KnightController> ();
+			knightHit.TakeDamage ();
+		}
+
+		yield return new WaitForSeconds (attackTime);
+
+
+		canAttack = true;
 	}
 
 	public void TakeDamage() {
