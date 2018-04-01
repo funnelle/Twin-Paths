@@ -305,8 +305,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69ebda4df5dbd4db9bb6b9de9e84fe48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftLeg: {fileID: 0}
-  rightLeg: {fileID: 0}
+  leftLeg: {fileID: 1265621966}
+  rightLeg: {fileID: 1372877134}
 --- !u!61 &258103435
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1038,7 +1038,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a10b3eb79be1a436cb034cb0997b8bae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leg: {fileID: 0}
+  leg: {fileID: 1025835667}
 --- !u!61 &1025835670
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1452,7 +1452,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a10b3eb79be1a436cb034cb0997b8bae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leg: {fileID: 0}
+  leg: {fileID: 1265621966}
 --- !u!61 &1265621969
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1550,7 +1550,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a10b3eb79be1a436cb034cb0997b8bae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leg: {fileID: 0}
+  leg: {fileID: 1326008952}
 --- !u!61 &1326008955
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1617,7 +1617,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a10b3eb79be1a436cb034cb0997b8bae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leg: {fileID: 0}
+  leg: {fileID: 1372877134}
 --- !u!61 &1372877137
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2029,7 +2029,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a10b3eb79be1a436cb034cb0997b8bae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leg: {fileID: 0}
+  leg: {fileID: 1614564910}
 --- !u!1 &1637978300
 GameObject:
   m_ObjectHideFlags: 0
@@ -2167,12 +2167,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbe22677b96e2694db809dcf83718328, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Delay: 3
+  SceneIndex: 0
   menuButton: Menu
   UIOverlay: {fileID: 1649150272}
   PauseScreen: {fileID: 1297514626}
   VictoryScreen: {fileID: 0}
-  KnightWin: 0
-  RogueWin: 0
+  Knight: {fileID: 0}
+  Rogue: {fileID: 0}
 --- !u!1 &1740408334
 GameObject:
   m_ObjectHideFlags: 0
@@ -2239,7 +2241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a10b3eb79be1a436cb034cb0997b8bae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leg: {fileID: 0}
+  leg: {fileID: 1740408334}
 --- !u!1 &1793175144
 GameObject:
   m_ObjectHideFlags: 0
@@ -2558,8 +2560,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69ebda4df5dbd4db9bb6b9de9e84fe48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftLeg: {fileID: 0}
-  rightLeg: {fileID: 0}
+  leftLeg: {fileID: 1740408334}
+  rightLeg: {fileID: 1614564910}
 --- !u!50 &1929012550
 Rigidbody2D:
   serializedVersion: 4
@@ -2644,8 +2646,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69ebda4df5dbd4db9bb6b9de9e84fe48, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  leftLeg: {fileID: 0}
-  rightLeg: {fileID: 0}
+  leftLeg: {fileID: 1326008952}
+  rightLeg: {fileID: 1025835667}
 --- !u!61 &2047691263
 BoxCollider2D:
   m_ObjectHideFlags: 0

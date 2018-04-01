@@ -54,18 +54,18 @@ public class UIController : MonoBehaviour {
 			PauseScreen.SetActive(isPauseShowing);
 			Knight.GetComponent<KnightController>().allowedMovement = false;
 			Rogue.GetComponent<RogueController>().allowedMovement = false;
-		}
 
-		if (!isPauseShowing)
-		{
-			if (Knight != null)
+			if (!isPauseShowing)
 			{
-				Knight.GetComponent<KnightController>().allowedMovement = true;
-			}
+				if (Knight != null)
+				{
+					Knight.GetComponent<KnightController>().allowedMovement = true;
+				}
 
-			if (Rogue != null)
-			{
-				Rogue.GetComponent<RogueController>().allowedMovement = true;
+				if (Rogue != null)
+				{
+					Rogue.GetComponent<RogueController>().allowedMovement = true;
+				}
 			}
 		}
 
