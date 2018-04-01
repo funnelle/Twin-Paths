@@ -34,6 +34,7 @@
             <e p="UIController.cs" t="Include" />
           </e>
           <e p="LoadSceneOnClick.cs" t="Include" />
+          <e p="MusicChanger.cs" t="Include" />
           <e p="RKLevelController.cs" t="Include" />
           <e p="screenSize.cs" t="Include" />
         </e>
