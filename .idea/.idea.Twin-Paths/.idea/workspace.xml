@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d2bed01f-49bc-4d1a-bbe1-0d3e07e6eb5a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Twin-Paths/.idea/contentModel.xml" afterPath="$PROJECT_DIR$/.idea/.idea.Twin-Paths/.idea/contentModel.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Twin-Paths/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.Twin-Paths/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Bangin' Banners.unity" afterPath="$PROJECT_DIR$/Assets/Scenes/Bangin' Banners.unity" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Courtyard.unity" afterPath="$PROJECT_DIR$/Assets/Scenes/Courtyard.unity" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Rogue_Hideout.unity" afterPath="$PROJECT_DIR$/Assets/Scenes/Rogue_Hideout.unity" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Tavern.unity" afterPath="$PROJECT_DIR$/Assets/Scenes/Tavern.unity" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Throne_Room.unity" afterPath="$PROJECT_DIR$/Assets/Scenes/Throne_Room.unity" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" afterPath="$PROJECT_DIR$/ProjectSettings/InputManager.asset" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Characters/Knight_Attack.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Characters/Knight_Attack.cs" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -79,7 +72,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UIController.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UIController.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/Level/UIController.cs">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
@@ -94,6 +87,24 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Knight_Attack.cs" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Assets/Scripts/Characters/Knight_Attack.cs">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="20" column="29" lean-forward="false" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+              <folding>
+                <marker date="1522606927094" expanded="false" signature="6:78" ph="..." />
+                <marker date="1522606927094" expanded="true" signature="123:954" ph="{...}" />
+                <marker date="1522606927094" expanded="true" signature="281:467" ph="{...}" />
+                <marker date="1522606927094" expanded="true" signature="497:571" ph="{...}" />
+                <marker date="1522606927094" expanded="true" signature="626:770" ph="{...}" />
+                <marker date="1522606927094" expanded="true" signature="812:952" ph="{...}" />
+                <marker date="1522606927094" expanded="true" signature="919:949" ph="{...}" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="Git.Settings">
@@ -101,6 +112,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/RKLevelController.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Characters/Knight_Attack.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Characters/KnightController.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Scripts/Level/UIController.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -109,6 +121,7 @@
       <list>
         <option value="$PROJECT_DIR$/Assets/Scripts/RKLevelController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Level/UIController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Characters/Knight_Attack.cs" />
       </list>
     </option>
   </component>
@@ -193,12 +206,12 @@
       <workItem from="1520203388387" duration="8138000" />
       <workItem from="1521941989366" duration="4622000" />
       <workItem from="1522589727589" duration="599000" />
-      <workItem from="1522606046179" duration="680000" />
+      <workItem from="1522606046179" duration="954000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15796000" />
+    <option name="totallyTimeSpent" value="16070000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -211,7 +224,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -221,7 +233,7 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18020834" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18020834" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -582,6 +594,22 @@
             <marker date="1522606530523" expanded="true" signature="122:397" ph="{...}" />
             <marker date="1522606530523" expanded="true" signature="279:333" ph="{...}" />
             <marker date="1522606530523" expanded="true" signature="388:395" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Assets/Scripts/Characters/Knight_Attack.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="20" column="29" lean-forward="false" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+          <folding>
+            <marker date="1522606927094" expanded="false" signature="6:78" ph="..." />
+            <marker date="1522606927094" expanded="true" signature="123:954" ph="{...}" />
+            <marker date="1522606927094" expanded="true" signature="281:467" ph="{...}" />
+            <marker date="1522606927094" expanded="true" signature="497:571" ph="{...}" />
+            <marker date="1522606927094" expanded="true" signature="626:770" ph="{...}" />
+            <marker date="1522606927094" expanded="true" signature="812:952" ph="{...}" />
+            <marker date="1522606927094" expanded="true" signature="919:949" ph="{...}" />
           </folding>
         </state>
       </provider>

@@ -14,6 +14,7 @@ public class Knight_Attack : MonoBehaviour {
 		sword = GetComponent<BoxCollider2D> ();
 		anim = GetComponentInParent<Animator> ();
 		knight = GetComponentInParent<KnightController> ();
+		rogue = GameObject.Find("RoguePlayer");
 	}
 
 	public void KnightAttack() {
