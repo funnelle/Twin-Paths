@@ -17,7 +17,6 @@
           <e p="Characters" t="Include">
             <e p="Knight_Attack.cs" t="Include" />
             <e p="KnightController.cs" t="Include" />
-            <e p="Rogue_Attack.cs" t="Include" />
             <e p="RogueController.cs" t="Include" />
           </e>
           <e p="Level" t="Include">
@@ -26,6 +25,13 @@
               <e p="PlatformLeg.cs" t="Include" />
               <e p="SoundManagerScript.cs" t="Include" />
             </e>
+            <e p="Rogue_Hideout" t="Include">
+              <e p="Platform_Swing.cs" t="Include" />
+            </e>
+            <e p="Tavern" t="Include">
+              <e p="BreakBox.cs" t="Include" />
+            </e>
+            <e p="UIController.cs" t="Include" />
           </e>
           <e p="LoadSceneOnClick.cs" t="Include" />
           <e p="RKLevelController.cs" t="Include" />
