@@ -3,16 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Knight_Attack : MonoBehaviour {
-	BoxCollider2D sword;
+	private BoxCollider2D sword;
+	private KnightController knight;
+	private Animator anim;
+
 	public float attackTime;
-	Animator anim;
-	GameObject rogue;
-	KnightController knight;
+	public GameObject rogue;
 
 	void Awake() {
 		sword = GetComponent<BoxCollider2D> ();
 		anim = GetComponentInParent<Animator> ();
-		rogue = GameObject.Find ("RoguePlayer");
 		knight = GetComponentInParent<KnightController> ();
 	}
 
@@ -29,10 +29,8 @@ public class Knight_Attack : MonoBehaviour {
 	}
 
 	void OnTriggerEnter2D(Collider2D coll) {
-		Debug.Log ("Hit");
 		RogueController damage = rogue.GetComponent<RogueController> ();
 		if (coll.gameObject.tag == "Rogue") {
-			Debug.Log ("Deal damage to Rogue");
 			damage.TakeDamage ();
 		}
 	}
