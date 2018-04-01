@@ -342,6 +342,8 @@ GameObject:
   - component: {fileID: 336820232}
   - component: {fileID: 336820231}
   - component: {fileID: 336820230}
+  - component: {fileID: 336820234}
+  - component: {fileID: 336820235}
   m_Layer: 5
   m_Name: UIOverlay
   m_TagString: Untagged
@@ -425,6 +427,40 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &336820234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 336820229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbe22677b96e2694db809dcf83718328, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuButton: Menu
+  UIOverlay: {fileID: 0}
+  PauseScreen: {fileID: 0}
+  VictoryScreen: {fileID: 0}
+  KnightWin: 0
+  RogueWin: 0
+--- !u!114 &336820235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 336820229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbe22677b96e2694db809dcf83718328, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuButton: Menu
+  UIOverlay: {fileID: 336820229}
+  PauseScreen: {fileID: 1631686858}
+  VictoryScreen: {fileID: 0}
+  KnightWin: 0
+  RogueWin: 0
 --- !u!1 &343792280
 GameObject:
   m_ObjectHideFlags: 0

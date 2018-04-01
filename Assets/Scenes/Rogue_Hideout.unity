@@ -135,7 +135,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 51677155}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2b83baf8cdb22384481490efe46582b6, type: 3}
   m_Name: 
@@ -294,7 +294,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 886360559}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -796,9 +796,9 @@ Transform:
   m_LocalPosition: {x: 45.6203, y: -23.18718, z: 0.15220153}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1390114656}
   - {fileID: 1709178981}
   - {fileID: 188271099}
+  - {fileID: 1390114656}
   - {fileID: 1162114472}
   m_Father: {fileID: 1062478265}
   m_RootOrder: 0
@@ -1084,6 +1084,7 @@ GameObject:
   - component: {fileID: 1062478264}
   - component: {fileID: 1062478263}
   - component: {fileID: 1062478262}
+  - component: {fileID: 1062478266}
   m_Layer: 5
   m_Name: UIOverlay
   m_TagString: Untagged
@@ -1168,6 +1169,23 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1062478266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1062478261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbe22677b96e2694db809dcf83718328, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  menuButton: Menu
+  UIOverlay: {fileID: 1062478261}
+  PauseScreen: {fileID: 1552307735}
+  VictoryScreen: {fileID: 886360558}
+  KnightWin: 0
+  RogueWin: 0
 --- !u!1 &1111592547
 GameObject:
   m_ObjectHideFlags: 0
@@ -1757,7 +1775,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 886360559}
-  m_RootOrder: 0
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -2110,7 +2128,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 886360559}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
