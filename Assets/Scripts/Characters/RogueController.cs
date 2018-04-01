@@ -15,6 +15,7 @@ public class RogueController : MonoBehaviour {
 	public float maxSpeed;
 	public float health;
 	public LayerMask wall;
+	public bool allowedMovement = true;
 
 	//attacking variables 
 	public LayerMask Enemy;
@@ -23,8 +24,7 @@ public class RogueController : MonoBehaviour {
 
 	//dash variables
 	bool dash = false;
-	bool canDash = true;
-	bool movementDisabled = false;
+	public bool canDash = true;
 	public Vector2 dashDistance;
 	public float dashTime;
 
@@ -53,7 +53,7 @@ public class RogueController : MonoBehaviour {
 		//get dash input
 		if (Input.GetButtonDown(dashButton) && canDash && dash != true) {
 			rb2d.velocity = new Vector2 (0,0);
-			movementDisabled = true;
+			allowedMovement = false;
 			canDash = false;
 			anim.SetBool ("Dash", true);
 			Physics2D.IgnoreCollision(GetComponent<BoxCollider2D>(), knight.GetComponent<BoxCollider2D>());
@@ -65,7 +65,6 @@ public class RogueController : MonoBehaviour {
 			else if (!facingRight) {
 				StartCoroutine (MoveOverSeconds (rogue, rb2d.position - dashDistance, dashTime));
 			}
-			movementDisabled = false;
 		}
 
 		if (grounded) {
@@ -106,7 +105,7 @@ public class RogueController : MonoBehaviour {
 		grounded = Physics2D.OverlapCircle (groundCheck.position, groundRadius, whatIsGround);
 
 		//movement code
-		if (movementDisabled == false) {
+		if (allowedMovement == true) {
 			float moveHorizontal = Input.GetAxis (horizontalButton);
 
 			rb2d.velocity = new Vector2 (moveHorizontal * maxSpeed, rb2d.velocity.y);
@@ -168,6 +167,7 @@ public class RogueController : MonoBehaviour {
 		rb2d.gravityScale = 1.0f;
 		Physics2D.IgnoreCollision(GetComponent<BoxCollider2D>(), knight.GetComponent<BoxCollider2D>(), false);
 		Physics2D.IgnoreCollision(GetComponent<BoxCollider2D>(), knight.GetComponentInChildren<BoxCollider2D>(), false);
+		allowedMovement = true;
 	}
 
 	private IEnumerator AttackLength (float attackTime) {
