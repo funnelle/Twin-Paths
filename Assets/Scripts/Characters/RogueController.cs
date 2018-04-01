@@ -129,6 +129,7 @@ public class RogueController : MonoBehaviour {
 		if (Input.GetButtonDown (attackButton) && (canAttack == true)) {
 			canAttack = false;
 			Debug.Log ("Attacking");
+			SoundManagerScript.PlaySound ("Rogue Attack");
 			StartCoroutine(AttackLength (attackTime));
 		}
 	}

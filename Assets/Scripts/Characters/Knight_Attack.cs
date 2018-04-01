@@ -7,11 +7,13 @@ public class Knight_Attack : MonoBehaviour {
 	public float attackTime;
 	Animator anim;
 	GameObject rogue;
+	KnightController knight;
 
 	void Awake() {
 		sword = GetComponent<BoxCollider2D> ();
 		anim = GetComponentInParent<Animator> ();
 		rogue = GameObject.Find ("RoguePlayer");
+		knight = GetComponentInParent<KnightController> ();
 	}
 
 	public void KnightAttack() {
@@ -23,6 +25,7 @@ public class Knight_Attack : MonoBehaviour {
 		yield return new WaitForSeconds (attackTime);
 		sword.enabled = false;
 		anim.SetBool ("Attack", false);
+		knight.allowedMovement = true;
 	}
 
 	void OnTriggerEnter2D(Collider2D coll) {

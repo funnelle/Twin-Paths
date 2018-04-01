@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class SoundManagerScript : MonoBehaviour {
 
-	public static AudioClip rogueDashSound, rogueWalkSound, rogueJumpSound;
+	public static AudioClip rogueDashSound, rogueWalkSound, rogueJumpSound, rogueAttackSound;
+	public static AudioClip knightWalkSound, knightDamageSound, knightAttackSound;
 	static AudioSource audioSrc;
 
 	// Use this for initialization
@@ -12,6 +13,10 @@ public class SoundManagerScript : MonoBehaviour {
 		rogueDashSound = Resources.Load<AudioClip> ("Audio/Character Sounds/Rogue/Rogue Dash V4");
 		rogueWalkSound = Resources.Load<AudioClip> ("Audio/Character Sounds/Rogue/Rogue Footstep");
 		rogueJumpSound = Resources.Load<AudioClip> ("Audio/Character Sounds/Rogue/Rogue Jump");
+		rogueAttackSound = Resources.Load<AudioClip> ("Audio/Character Sounds/Rogue/Rogue Attack Rev");
+
+		knightWalkSound = Resources.Load<AudioClip> ("Audio/Character Sounds/Knight/Knight Footstep");
+		knightDamageSound = Resources.Load<AudioClip> ("Audio/Character Sounds/Knight/Knight First Hit");
 
 		audioSrc = GetComponent<AudioSource> ();
 	}
@@ -26,6 +31,15 @@ public class SoundManagerScript : MonoBehaviour {
 			break;
 		case "Rogue Jump":
 			audioSrc.PlayOneShot (rogueJumpSound);
+			break;
+		case "Rogue Attack":
+			audioSrc.PlayOneShot (rogueAttackSound);
+			break;
+		case "Knight Footstep":
+			audioSrc.PlayOneShot (knightWalkSound);
+			break;
+		case "Knight Damage":
+			audioSrc.PlayOneShot (knightDamageSound);
 			break;
 		}
 	}
