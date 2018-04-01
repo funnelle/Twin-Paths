@@ -52,6 +52,7 @@ public class RogueController : MonoBehaviour {
 	void Update() {
 		//get dash input
 		if (Input.GetButtonDown(dashButton) && canDash && dash != true) {
+			canAttack = false;
 			rb2d.velocity = new Vector2 (0,0);
 			allowedMovement = false;
 			canDash = false;
@@ -168,6 +169,7 @@ public class RogueController : MonoBehaviour {
 		Physics2D.IgnoreCollision(GetComponent<BoxCollider2D>(), knight.GetComponent<BoxCollider2D>(), false);
 		Physics2D.IgnoreCollision(GetComponent<BoxCollider2D>(), knight.GetComponentInChildren<BoxCollider2D>(), false);
 		allowedMovement = true;
+		canAttack = true;
 	}
 
 	private IEnumerator AttackLength (float attackTime) {
@@ -197,6 +199,7 @@ public class RogueController : MonoBehaviour {
 	public void TakeDamage() {
 		//play death sound
 		//play death animation
+		canAttack = false;
 		if (dash != true) {
 			health -= 1;
 			if (health <= 0) {
