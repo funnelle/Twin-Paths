@@ -209,4 +209,8 @@ public class RogueController : MonoBehaviour {
 	void OnBecameInvisible() {
 		Destroy (rogue);
 	}
+
+	void WalkSound() {
+		SoundManagerScript.PlaySound ("Rogue Footstep");
+	}
 }
