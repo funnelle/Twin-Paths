@@ -54,13 +54,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1843607622975680}
-  m_LocalRotation: {x: -0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.7398529, y: 0.77, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: -0.2773147, w: 0.96077913}
+  m_LocalPosition: {x: 0.5, y: 0.65, z: 0}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4255516076854988}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -32.2}
 --- !u!4 &4255516076854988
 Transform:
   m_ObjectHideFlags: 1
@@ -132,7 +132,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.1622318, y: -0.11675954}
+  m_Offset: {x: 0.11284375, y: -0.11110857}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -143,7 +143,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.41564822, y: 0.77927446}
+  m_Size: {x: 0.14913595, y: 0.7905764}
   m_EdgeRadius: 0
 --- !u!95 &95811860931676688
 Animator:
@@ -177,6 +177,7 @@ MonoBehaviour:
   maxSpeed: 1
   health: 2
   jumpForce: 1
+  allowedMovement: 1
   horizontalButton: Horizontal_p2
   jumpButton: Jump_p2
   attackButton: Attack_p2
@@ -193,6 +194,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackTime: 1
+  rogue: {fileID: 0}
 --- !u!212 &212284233570977964
 SpriteRenderer:
   m_ObjectHideFlags: 1

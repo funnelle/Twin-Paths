@@ -711,6 +711,11 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114943367631611660, guid: 9f92d9c060dd64e82b9dae7690a3d022,
+        type: 2}
+      propertyPath: rogue
+      value: 
+      objectReference: {fileID: 680942207}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9f92d9c060dd64e82b9dae7690a3d022, type: 2}
   m_IsPrefabParent: 0
@@ -906,9 +911,19 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 114274188114893040, guid: 36fe46911bda94dc28faa90c44d7f924,
+        type: 2}
+      propertyPath: whatIsGround.m_Bits
+      value: 16896
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 36fe46911bda94dc28faa90c44d7f924, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &680942207 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1411918863081932, guid: 36fe46911bda94dc28faa90c44d7f924,
+    type: 2}
+  m_PrefabInternal: {fileID: 680942206}
 --- !u!1 &854501608
 GameObject:
   m_ObjectHideFlags: 0
