@@ -1630,6 +1630,11 @@ Prefab:
     - target: {fileID: 61639757148021984, guid: 9f92d9c060dd64e82b9dae7690a3d022,
         type: 2}
       propertyPath: m_UsedByEffector
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 251144114481356634, guid: 9f92d9c060dd64e82b9dae7690a3d022,
+        type: 2}
+      propertyPath: m_UseOneWay
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
