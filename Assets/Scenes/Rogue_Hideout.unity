@@ -254,12 +254,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbe22677b96e2694db809dcf83718328, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Delay: 3
+  SceneIndex: 0
   menuButton: Menu
   UIOverlay: {fileID: 56539170}
   PauseScreen: {fileID: 134034780}
   VictoryScreen: {fileID: 552357666}
-  KnightWin: 0
-  RogueWin: 0
+  Knight: {fileID: 0}
+  Rogue: {fileID: 0}
 --- !u!114 &56539172
 MonoBehaviour:
   m_ObjectHideFlags: 0
