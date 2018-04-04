@@ -16,6 +16,7 @@ public class RogueController : MonoBehaviour {
 	public float health;
 	public LayerMask wall;
 	public bool allowedMovement = true;
+	float moveHorizontal;
 
 	//attacking variables 
 	public LayerMask Enemy;
@@ -60,9 +61,16 @@ public class RogueController : MonoBehaviour {
 
 		//get jump input
 		if ((dash == false) && grounded && Input.GetButtonDown(jumpButton)) {
-			anim.SetBool ("Jump", true);
+			if (Mathf.Abs (moveHorizontal) < 0.01f) {
+				anim.SetBool ("Jump", true);
+			}
 			SoundManagerScript.PlaySound ("Rogue Jump");
 			rb2d.AddForce (new Vector2 (0, jumpForce));
+		}
+
+		//attack
+		if (Input.GetButtonDown (attackButton) && (canAttack == true)) {
+			anim.SetBool ("Attack", true);
 		}
 	}
 
@@ -72,7 +80,7 @@ public class RogueController : MonoBehaviour {
 
 		//horizontal movement
 		if (allowedMovement == true) {
-			float moveHorizontal = Input.GetAxis (horizontalButton);
+			moveHorizontal = Input.GetAxis (horizontalButton);
 
 			rb2d.velocity = new Vector2 (moveHorizontal * maxSpeed, rb2d.velocity.y);
 
@@ -93,6 +101,7 @@ public class RogueController : MonoBehaviour {
 		//dash
 		if (Input.GetButtonDown(dashButton) && canDash && dash != true) {
 			canAttack = false;
+			anim.SetBool ("Attack", false);
 			rb2d.velocity = new Vector2 (0,0);
 			allowedMovement = false;
 			canDash = false;
@@ -107,15 +116,6 @@ public class RogueController : MonoBehaviour {
 			else if (!facingRight) {
 				StartCoroutine (MoveOverSeconds (rogue, rb2d.position - dashDistance, dashTime));
 			}
-		}
-
-		//attack
-		if (Input.GetButtonDown (attackButton) && (canAttack == true)) {
-			canAttack = false;
-			Debug.Log ("Attacking");
-			SoundManagerScript.PlaySound ("Rogue Attack");
-			anim.SetBool ("Attack", true);
-			StartCoroutine(AttackLength (attackTime));
 		}
 
 		//Raycast to check for map edges
@@ -142,6 +142,7 @@ public class RogueController : MonoBehaviour {
 		transform.localScale = theScale;
 	}
 
+	//Interpolates Point A to Point B and translates Rogue between those points in a certain time. Results in Dash
 	public IEnumerator MoveOverSeconds (GameObject objectToMove, Vector2 end, float seconds) {
 		float elapsedTime = 0;
 		Vector2 startingPos = objectToMove.transform.position;
@@ -174,6 +175,17 @@ public class RogueController : MonoBehaviour {
 		StartCoroutine (DelayDash (dashDelay));
 	}
 
+	public void Attack() {
+		//attack
+		canAttack = false;
+		canDash = false;
+		Debug.Log ("Attacking");
+		SoundManagerScript.PlaySound ("Rogue Attack");
+		StartCoroutine(AttackLength (attackTime));
+		anim.SetBool ("Attack", false);
+	}
+
+	//Length of time the Rogue has his blade out and can hit his attack
 	private IEnumerator AttackLength (float attackTime) {
 		//Attack with raycast
 		Vector2 position = transform.position;
@@ -184,7 +196,7 @@ public class RogueController : MonoBehaviour {
 		} else if (!facingRight) {
 			direction = Vector2.left;
 		}
-		float distance = 0.5f;
+		float distance = 0.4f;
 		RaycastHit2D hit = Physics2D.Raycast (position, direction, distance, Enemy);
 
 		if (hit.collider != null) {
@@ -194,15 +206,17 @@ public class RogueController : MonoBehaviour {
 
 		yield return new WaitForSeconds (attackTime);
 
-		anim.SetBool ("Attack", false);
 		canAttack = true;
+		canDash = true;
 	}
 
+	//Delay between dashes
 	private IEnumerator DelayDash(float delayTime) {
 		yield return new WaitForSeconds (delayTime);
 		delayDone = true;
 	}
 
+	//When hit, take damage
 	public void TakeDamage() {
 		//play death sound
 		//play death animation
@@ -216,10 +230,12 @@ public class RogueController : MonoBehaviour {
 		}
 	}
 
+	//If the Rogue leaves the screen, kill the rogue
 	void OnBecameInvisible() {
 		Destroy (rogue);
 	}
 
+	//Called by Animator to play walk sound
 	void WalkSound() {
 		SoundManagerScript.PlaySound ("Rogue Footstep");
 	}
