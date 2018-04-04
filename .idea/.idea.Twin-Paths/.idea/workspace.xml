@@ -1,16 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d2bed01f-49bc-4d1a-bbe1-0d3e07e6eb5a" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Twin-Paths/.idea/contentModel.xml" afterPath="$PROJECT_DIR$/.idea/.idea.Twin-Paths/.idea/contentModel.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Twin-Paths/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/.idea.Twin-Paths/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Bangin' Banners.unity" afterPath="$PROJECT_DIR$/Assets/Scenes/Bangin' Banners.unity" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Courtyard.unity" afterPath="$PROJECT_DIR$/Assets/Scenes/Courtyard.unity" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Rogue_Hideout.unity" afterPath="$PROJECT_DIR$/Assets/Scenes/Rogue_Hideout.unity" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Tavern.unity" afterPath="$PROJECT_DIR$/Assets/Scenes/Tavern.unity" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Throne_Room.unity" afterPath="$PROJECT_DIR$/Assets/Scenes/Throne_Room.unity" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Level/UIController.cs" afterPath="$PROJECT_DIR$/Assets/Scripts/Level/UIController.cs" />
-    </list>
+    <list default="true" id="d2bed01f-49bc-4d1a-bbe1-0d3e07e6eb5a" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -85,20 +76,19 @@
             <state relative-caret-position="709">
               <caret line="86" column="9" lean-forward="false" selection-start-line="86" selection-start-column="9" selection-end-line="86" selection-end-column="9" />
               <folding>
-                <marker date="1522620357134" expanded="true" signature="6:223" ph="..." />
-                <marker date="1522620357134" expanded="true" signature="267:2054" ph="{...}" />
-                <marker date="1522620357134" expanded="true" signature="672:764" ph="{...}" />
-                <marker date="1522620357134" expanded="true" signature="812:818" ph="{...}" />
-                <marker date="1522620357134" expanded="true" signature="872:1988" ph="{...}" />
-                <marker date="1522620357134" expanded="true" signature="991:1181" ph="{...}" />
-                <marker date="1522620357134" expanded="true" signature="1221:1442" ph="{...}" />
-                <marker date="1522620357134" expanded="true" signature="1466:1674" ph="{...}" />
-                <marker date="1522620357134" expanded="true" signature="1493:1571" ph="{...}" />
-                <marker date="1522620357134" expanded="true" signature="1594:1670" ph="{...}" />
-                <marker date="1522620357134" expanded="true" signature="1704:1985" ph="{...}" />
-                <marker date="1522620357134" expanded="true" signature="1766:1846" ph="{...}" />
-                <marker date="1522620357134" expanded="true" signature="1868:1945" ph="{...}" />
-                <marker date="1522620357134" expanded="true" signature="2008:2052" ph="{...}" />
+                <marker date="1522621980928" expanded="true" signature="6:223" ph="..." />
+                <marker date="1522621980928" expanded="true" signature="267:2065" ph="{...}" />
+                <marker date="1522621980928" expanded="true" signature="672:764" ph="{...}" />
+                <marker date="1522621980928" expanded="true" signature="812:818" ph="{...}" />
+                <marker date="1522621980928" expanded="true" signature="872:1999" ph="{...}" />
+                <marker date="1522621980928" expanded="true" signature="991:1181" ph="{...}" />
+                <marker date="1522621980928" expanded="true" signature="1221:1439" ph="{...}" />
+                <marker date="1522621980928" expanded="true" signature="1676:1681" ph="{...}" />
+                <marker date="1522621980928" expanded="true" signature="1676:1685" ph="{...}" />
+                <marker date="1522621980928" expanded="true" signature="1715:1996" ph="{...}" />
+                <marker date="1522621980928" expanded="true" signature="1777:1857" ph="{...}" />
+                <marker date="1522621980928" expanded="true" signature="1879:1956" ph="{...}" />
+                <marker date="1522621980928" expanded="true" signature="2019:2063" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -168,20 +158,20 @@
       <file leaf-file-name="MusicChanger.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Assets/Scripts/MusicChanger.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="679">
-              <caret line="68" column="34" lean-forward="true" selection-start-line="68" selection-start-column="34" selection-end-line="68" selection-end-column="34" />
+            <state relative-caret-position="540">
+              <caret line="36" column="47" lean-forward="false" selection-start-line="36" selection-start-column="47" selection-end-line="36" selection-end-column="47" />
               <folding>
-                <marker date="1522620416663" expanded="true" signature="6:136" ph="..." />
-                <marker date="1522620416663" expanded="true" signature="180:1772" ph="{...}" />
-                <marker date="1522620416663" expanded="true" signature="410:519" ph="/* private AudioClip _currentAudioClip; ... */" />
-                <marker date="1522620416663" expanded="true" signature="590:1361" ph="{...}" />
-                <marker date="1522620416663" expanded="true" signature="596:822" ph="/* List will contain 5 scene names when game is completed -&gt; REMEMBER TO ADD AS LISTED, ORDER MATTERS ... */" />
-                <marker date="1522620416663" expanded="true" signature="968:1207" ph="/* Potentially useful code incase of rework: ... */" />
-                <marker date="1522620416663" expanded="true" signature="1276:1358" ph="{...}" />
-                <marker date="1522620416663" expanded="true" signature="1411:1418" ph="{...}" />
-                <marker date="1522620416663" expanded="true" signature="1472:1770" ph="{...}" />
-                <marker date="1522620416663" expanded="true" signature="1689:1723" ph="{...}" />
-                <marker date="1522620416663" expanded="true" signature="1731:1767" ph="{...}" />
+                <marker date="1522621980929" expanded="true" signature="6:113" ph="..." />
+                <marker date="1522621980929" expanded="true" signature="157:1749" ph="{...}" />
+                <marker date="1522621980929" expanded="true" signature="387:496" ph="/* private AudioClip _currentAudioClip; ... */" />
+                <marker date="1522621980929" expanded="true" signature="567:1338" ph="{...}" />
+                <marker date="1522621980929" expanded="true" signature="573:799" ph="/* List will contain 5 scene names when game is completed -&gt; REMEMBER TO ADD AS LISTED, ORDER MATTERS ... */" />
+                <marker date="1522621980929" expanded="true" signature="945:1184" ph="/* Potentially useful code incase of rework: ... */" />
+                <marker date="1522621980929" expanded="true" signature="1253:1335" ph="{...}" />
+                <marker date="1522621980929" expanded="true" signature="1388:1395" ph="{...}" />
+                <marker date="1522621980929" expanded="true" signature="1449:1747" ph="{...}" />
+                <marker date="1522621980929" expanded="true" signature="1666:1700" ph="{...}" />
+                <marker date="1522621980929" expanded="true" signature="1708:1744" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -337,12 +327,12 @@
       <workItem from="1520203388387" duration="8138000" />
       <workItem from="1521941989366" duration="4622000" />
       <workItem from="1522589727589" duration="599000" />
-      <workItem from="1522606046179" duration="10572000" />
+      <workItem from="1522606046179" duration="11180000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="25688000" />
+    <option name="totallyTimeSpent" value="26296000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -355,7 +345,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -803,40 +792,39 @@
         <state relative-caret-position="709">
           <caret line="86" column="9" lean-forward="false" selection-start-line="86" selection-start-column="9" selection-end-line="86" selection-end-column="9" />
           <folding>
-            <marker date="1522620357134" expanded="true" signature="6:223" ph="..." />
-            <marker date="1522620357134" expanded="true" signature="267:2054" ph="{...}" />
-            <marker date="1522620357134" expanded="true" signature="672:764" ph="{...}" />
-            <marker date="1522620357134" expanded="true" signature="812:818" ph="{...}" />
-            <marker date="1522620357134" expanded="true" signature="872:1988" ph="{...}" />
-            <marker date="1522620357134" expanded="true" signature="991:1181" ph="{...}" />
-            <marker date="1522620357134" expanded="true" signature="1221:1442" ph="{...}" />
-            <marker date="1522620357134" expanded="true" signature="1466:1674" ph="{...}" />
-            <marker date="1522620357134" expanded="true" signature="1493:1571" ph="{...}" />
-            <marker date="1522620357134" expanded="true" signature="1594:1670" ph="{...}" />
-            <marker date="1522620357134" expanded="true" signature="1704:1985" ph="{...}" />
-            <marker date="1522620357134" expanded="true" signature="1766:1846" ph="{...}" />
-            <marker date="1522620357134" expanded="true" signature="1868:1945" ph="{...}" />
-            <marker date="1522620357134" expanded="true" signature="2008:2052" ph="{...}" />
+            <marker date="1522621980928" expanded="true" signature="6:223" ph="..." />
+            <marker date="1522621980928" expanded="true" signature="267:2065" ph="{...}" />
+            <marker date="1522621980928" expanded="true" signature="672:764" ph="{...}" />
+            <marker date="1522621980928" expanded="true" signature="812:818" ph="{...}" />
+            <marker date="1522621980928" expanded="true" signature="872:1999" ph="{...}" />
+            <marker date="1522621980928" expanded="true" signature="991:1181" ph="{...}" />
+            <marker date="1522621980928" expanded="true" signature="1221:1439" ph="{...}" />
+            <marker date="1522621980928" expanded="true" signature="1676:1681" ph="{...}" />
+            <marker date="1522621980928" expanded="true" signature="1676:1685" ph="{...}" />
+            <marker date="1522621980928" expanded="true" signature="1715:1996" ph="{...}" />
+            <marker date="1522621980928" expanded="true" signature="1777:1857" ph="{...}" />
+            <marker date="1522621980928" expanded="true" signature="1879:1956" ph="{...}" />
+            <marker date="1522621980928" expanded="true" signature="2019:2063" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Assets/Scripts/MusicChanger.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="679">
-          <caret line="68" column="34" lean-forward="true" selection-start-line="68" selection-start-column="34" selection-end-line="68" selection-end-column="34" />
+        <state relative-caret-position="540">
+          <caret line="36" column="47" lean-forward="false" selection-start-line="36" selection-start-column="47" selection-end-line="36" selection-end-column="47" />
           <folding>
-            <marker date="1522620416663" expanded="true" signature="6:136" ph="..." />
-            <marker date="1522620416663" expanded="true" signature="180:1772" ph="{...}" />
-            <marker date="1522620416663" expanded="true" signature="410:519" ph="/* private AudioClip _currentAudioClip; ... */" />
-            <marker date="1522620416663" expanded="true" signature="590:1361" ph="{...}" />
-            <marker date="1522620416663" expanded="true" signature="596:822" ph="/* List will contain 5 scene names when game is completed -&gt; REMEMBER TO ADD AS LISTED, ORDER MATTERS ... */" />
-            <marker date="1522620416663" expanded="true" signature="968:1207" ph="/* Potentially useful code incase of rework: ... */" />
-            <marker date="1522620416663" expanded="true" signature="1276:1358" ph="{...}" />
-            <marker date="1522620416663" expanded="true" signature="1411:1418" ph="{...}" />
-            <marker date="1522620416663" expanded="true" signature="1472:1770" ph="{...}" />
-            <marker date="1522620416663" expanded="true" signature="1689:1723" ph="{...}" />
-            <marker date="1522620416663" expanded="true" signature="1731:1767" ph="{...}" />
+            <marker date="1522621980929" expanded="true" signature="6:113" ph="..." />
+            <marker date="1522621980929" expanded="true" signature="157:1749" ph="{...}" />
+            <marker date="1522621980929" expanded="true" signature="387:496" ph="/* private AudioClip _currentAudioClip; ... */" />
+            <marker date="1522621980929" expanded="true" signature="567:1338" ph="{...}" />
+            <marker date="1522621980929" expanded="true" signature="573:799" ph="/* List will contain 5 scene names when game is completed -&gt; REMEMBER TO ADD AS LISTED, ORDER MATTERS ... */" />
+            <marker date="1522621980929" expanded="true" signature="945:1184" ph="/* Potentially useful code incase of rework: ... */" />
+            <marker date="1522621980929" expanded="true" signature="1253:1335" ph="{...}" />
+            <marker date="1522621980929" expanded="true" signature="1388:1395" ph="{...}" />
+            <marker date="1522621980929" expanded="true" signature="1449:1747" ph="{...}" />
+            <marker date="1522621980929" expanded="true" signature="1666:1700" ph="{...}" />
+            <marker date="1522621980929" expanded="true" signature="1708:1744" ph="{...}" />
           </folding>
         </state>
       </provider>
