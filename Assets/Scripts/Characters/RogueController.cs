@@ -27,6 +27,8 @@ public class RogueController : MonoBehaviour {
 	public bool canDash = true;
 	public Vector2 dashDistance;
 	public float dashTime;
+	public float dashDelay;
+	public bool delayDone = true;
 
 	//jumping variables
 	public bool grounded = false;
@@ -50,25 +52,8 @@ public class RogueController : MonoBehaviour {
 	}
 
 	void Update() {
-		//get dash input
-		if (Input.GetButtonDown(dashButton) && canDash && dash != true) {
-			canAttack = false;
-			rb2d.velocity = new Vector2 (0,0);
-			allowedMovement = false;
-			canDash = false;
-			anim.SetBool ("Dash", true);
-			Physics2D.IgnoreCollision(GetComponent<BoxCollider2D>(), knight.GetComponent<BoxCollider2D>());
-			Physics2D.IgnoreCollision(GetComponent<BoxCollider2D>(), knight.GetComponentInChildren<BoxCollider2D>());
-			dash = true;
-			if (facingRight) {
-				StartCoroutine (MoveOverSeconds (rogue, rb2d.position + dashDistance, dashTime));
-			}
-			else if (!facingRight) {
-				StartCoroutine (MoveOverSeconds (rogue, rb2d.position - dashDistance, dashTime));
-			}
-		}
-
-		if (grounded) {
+		//determines if Rogue can Dash
+		if (grounded && delayDone) {
 			anim.SetBool ("Jump", false);
 			canDash = true;
 		}
@@ -79,33 +64,13 @@ public class RogueController : MonoBehaviour {
 			SoundManagerScript.PlaySound ("Rogue Jump");
 			rb2d.AddForce (new Vector2 (0, jumpForce));
 		}
-
-		//Raycast to check for map edges
-		Vector2 position = transform.position;
-		Vector2 direction = Vector2.right;
-		if (facingRight) {
-			direction = Vector2.right;
-		}
-		else if (!facingRight) {
-			direction = Vector2.left;
-		}
-		float distance = 0.2f;
-		RaycastHit2D hit = Physics2D.Raycast (position, direction, distance, wall);
-
-		if (hit.collider != null) {
-			dash = false;
-		}
-
-		//Test damage taken
-		if (Input.GetButtonDown(damageButton)) {
-			TakeDamage ();
-		}
 	}
 
 	void FixedUpdate() {
+		//ground check
 		grounded = Physics2D.OverlapCircle (groundCheck.position, groundRadius, whatIsGround);
 
-		//movement code
+		//horizontal movement
 		if (allowedMovement == true) {
 			float moveHorizontal = Input.GetAxis (horizontalButton);
 
@@ -125,12 +90,48 @@ public class RogueController : MonoBehaviour {
 			}
 		}
 
+		//dash
+		if (Input.GetButtonDown(dashButton) && canDash && dash != true) {
+			canAttack = false;
+			rb2d.velocity = new Vector2 (0,0);
+			allowedMovement = false;
+			canDash = false;
+			delayDone = false;
+			anim.SetBool ("Dash", true);
+			Physics2D.IgnoreCollision(GetComponent<BoxCollider2D>(), knight.GetComponent<BoxCollider2D>());
+			Physics2D.IgnoreCollision(GetComponent<BoxCollider2D>(), knight.GetComponentInChildren<BoxCollider2D>());
+			dash = true;
+			if (facingRight) {
+				StartCoroutine (MoveOverSeconds (rogue, rb2d.position + dashDistance, dashTime));
+			}
+			else if (!facingRight) {
+				StartCoroutine (MoveOverSeconds (rogue, rb2d.position - dashDistance, dashTime));
+			}
+		}
+
 		//attack
 		if (Input.GetButtonDown (attackButton) && (canAttack == true)) {
 			canAttack = false;
 			Debug.Log ("Attacking");
 			SoundManagerScript.PlaySound ("Rogue Attack");
+			anim.SetBool ("Attack", true);
 			StartCoroutine(AttackLength (attackTime));
+		}
+
+		//Raycast to check for map edges
+		Vector2 position = transform.position;
+		Vector2 direction = Vector2.right;
+		if (facingRight) {
+			direction = Vector2.right;
+		}
+		else if (!facingRight) {
+			direction = Vector2.left;
+		}
+		float distance = 0.2f;
+		RaycastHit2D hit = Physics2D.Raycast (position, direction, distance, wall);
+
+		if (hit.collider != null) {
+			dash = false;
 		}
 	}
 		
@@ -170,6 +171,7 @@ public class RogueController : MonoBehaviour {
 		Physics2D.IgnoreCollision(GetComponent<BoxCollider2D>(), knight.GetComponentInChildren<BoxCollider2D>(), false);
 		allowedMovement = true;
 		canAttack = true;
+		StartCoroutine (DelayDash (dashDelay));
 	}
 
 	private IEnumerator AttackLength (float attackTime) {
@@ -192,8 +194,13 @@ public class RogueController : MonoBehaviour {
 
 		yield return new WaitForSeconds (attackTime);
 
-
+		anim.SetBool ("Attack", false);
 		canAttack = true;
+	}
+
+	private IEnumerator DelayDash(float delayTime) {
+		yield return new WaitForSeconds (delayTime);
+		delayDone = true;
 	}
 
 	public void TakeDamage() {
