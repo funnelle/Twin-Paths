@@ -33,7 +33,7 @@ public class RogueController : MonoBehaviour {
 
 	//jumping variables
 	public bool grounded = false;
-	float groundRadius = 0.2f;
+	float groundRadius = 0.1f;
 	public Transform groundCheck;
 	public LayerMask whatIsGround;
 	public float jumpForce;
