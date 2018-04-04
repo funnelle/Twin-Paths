@@ -60,7 +60,7 @@ public class RogueController : MonoBehaviour {
 		}
 
 		//get jump input
-		if ((dash == false) && grounded && Input.GetButtonDown(jumpButton)) {
+		if ((dash == false) && grounded && allowedMovement && Input.GetButtonDown(jumpButton)) {
 			if (Mathf.Abs (moveHorizontal) < 0.01f) {
 				anim.SetBool ("Jump", true);
 			}
@@ -69,7 +69,7 @@ public class RogueController : MonoBehaviour {
 		}
 
 		//attack
-		if (Input.GetButtonDown (attackButton) && (canAttack == true)) {
+		if (Input.GetButtonDown (attackButton) && (canAttack == true) && allowedMovement) {
 			anim.SetBool ("Attack", true);
 		}
 	}
@@ -99,7 +99,7 @@ public class RogueController : MonoBehaviour {
 		}
 
 		//dash
-		if (Input.GetButtonDown(dashButton) && canDash && dash != true) {
+		if (Input.GetButtonDown(dashButton) && canDash && allowedMovement && dash != true) {
 			canAttack = false;
 			anim.SetBool ("Attack", false);
 			rb2d.velocity = new Vector2 (0,0);
@@ -221,6 +221,7 @@ public class RogueController : MonoBehaviour {
 		//play death sound
 		//play death animation
 		canAttack = false;
+		allowedMovement = false;
 		if (dash != true) {
 			health -= 1;
 			if (health <= 0) {
