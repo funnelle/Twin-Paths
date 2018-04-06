@@ -1,33 +1,30 @@
 fileFormatVersion: 2
-guid: 6c7862d680d7e4d099635c2d4295e057
-timeCreated: 1522871738
+guid: 192195f7ded744718b2b5f3e392dec0f
+timeCreated: 1522948742
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: knight attack_0
-    21300002: knight attack_1
-    21300004: knight attack_2
-    21300006: knight attack_3
-    21300008: knight attack_4
-    21300010: knight attack_5
-    21300012: knight attack_6
-    21300014: knight attack_7
-    21300016: knight attack_8
-    21300018: knight attack_9
-    21300020: knight attack_10
-    21300022: knight attack_11
-    21300024: knight attack_12
-    21300026: knight attack_13
-    21300028: knight attack_14
-    21300030: knight attack_15
-    21300032: knight attack_16
-    21300034: knight attack_17
-    21300036: knight attack_18
-    21300038: knight attack_19
-    21300040: knight attack_20
-    21300042: knight attack_21
-    21300044: knight attack_22
-    21300046: knight attack_23
+    21300000: knight attack (2)_0
+    21300002: knight attack (2)_1
+    21300004: knight attack (2)_2
+    21300006: knight attack (2)_3
+    21300008: knight attack (2)_4
+    21300010: knight attack (2)_5
+    21300012: knight attack (2)_6
+    21300014: knight attack (2)_7
+    21300016: knight attack (2)_8
+    21300018: knight attack (2)_9
+    21300020: knight attack (2)_10
+    21300022: knight attack (2)_11
+    21300024: knight attack (2)_12
+    21300026: knight attack (2)_13
+    21300028: knight attack (2)_14
+    21300030: knight attack (2)_15
+    21300032: knight attack (2)_16
+    21300034: knight attack (2)_17
+    21300036: knight attack (2)_18
+    21300038: knight attack (2)_19
+    21300040: knight attack (2)_20
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -91,350 +88,308 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
   - buildTarget: Standalone
-    maxTextureSize: 2048
+    maxTextureSize: 8192
     resizeAlgorithm: 0
-    textureFormat: -1
+    textureFormat: 12
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
-    overridden: 0
+    overridden: 1
     androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: knight attack_0
+      name: knight attack (2)_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 256
-        height: 200
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 384
+        height: 384
+      alignment: 9
+      pivot: {x: 0.3993679, y: 0.1707255}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: knight attack_1
+      name: knight attack (2)_1
       rect:
         serializedVersion: 2
-        x: 256
+        x: 384
         y: 0
-        width: 256
-        height: 200
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 384
+        height: 384
+      alignment: 9
+      pivot: {x: 0.3993679, y: 0.1707255}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: knight attack_2
-      rect:
-        serializedVersion: 2
-        x: 512
-        y: 0
-        width: 256
-        height: 200
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: knight attack_3
+      name: knight attack (2)_2
       rect:
         serializedVersion: 2
         x: 768
         y: 0
-        width: 256
-        height: 200
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 384
+        height: 384
+      alignment: 9
+      pivot: {x: 0.3993679, y: 0.1707255}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: knight attack_4
+      name: knight attack (2)_3
       rect:
         serializedVersion: 2
-        x: 1024
+        x: 1152
         y: 0
-        width: 256
-        height: 200
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 384
+        height: 384
+      alignment: 9
+      pivot: {x: 0.3993679, y: 0.1707255}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: knight attack_5
-      rect:
-        serializedVersion: 2
-        x: 1280
-        y: 0
-        width: 256
-        height: 200
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: knight attack_6
+      name: knight attack (2)_4
       rect:
         serializedVersion: 2
         x: 1536
         y: 0
-        width: 256
-        height: 200
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 384
+        height: 384
+      alignment: 9
+      pivot: {x: 0.3993679, y: 0.1707255}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: knight attack_7
+      name: knight attack (2)_5
       rect:
         serializedVersion: 2
-        x: 1792
+        x: 1920
         y: 0
-        width: 256
-        height: 200
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 384
+        height: 384
+      alignment: 9
+      pivot: {x: 0.3993679, y: 0.1707255}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: knight attack_8
-      rect:
-        serializedVersion: 2
-        x: 2048
-        y: 0
-        width: 256
-        height: 200
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: knight attack_9
+      name: knight attack (2)_6
       rect:
         serializedVersion: 2
         x: 2304
         y: 0
-        width: 256
-        height: 200
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 384
+        height: 384
+      alignment: 9
+      pivot: {x: 0.3993679, y: 0.1707255}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: knight attack_10
+      name: knight attack (2)_7
       rect:
         serializedVersion: 2
-        x: 2560
+        x: 2688
         y: 0
-        width: 256
-        height: 200
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 384
+        height: 384
+      alignment: 9
+      pivot: {x: 0.3993679, y: 0.1707255}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: knight attack_11
-      rect:
-        serializedVersion: 2
-        x: 2816
-        y: 0
-        width: 256
-        height: 200
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: knight attack_12
+      name: knight attack (2)_8
       rect:
         serializedVersion: 2
         x: 3072
         y: 0
-        width: 256
-        height: 200
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 384
+        height: 384
+      alignment: 9
+      pivot: {x: 0.3993679, y: 0.1707255}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: knight attack_13
+      name: knight attack (2)_9
       rect:
         serializedVersion: 2
-        x: 3328
+        x: 3456
         y: 0
-        width: 256
-        height: 200
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 384
+        height: 384
+      alignment: 9
+      pivot: {x: 0.3993679, y: 0.1707255}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: knight attack_14
-      rect:
-        serializedVersion: 2
-        x: 3584
-        y: 0
-        width: 256
-        height: 200
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: knight attack_15
+      name: knight attack (2)_10
       rect:
         serializedVersion: 2
         x: 3840
         y: 0
-        width: 256
-        height: 200
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 384
+        height: 384
+      alignment: 9
+      pivot: {x: 0.3993679, y: 0.1707255}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: knight attack_16
+      name: knight attack (2)_11
       rect:
         serializedVersion: 2
-        x: 4096
+        x: 4224
         y: 0
-        width: 256
-        height: 200
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 384
+        height: 384
+      alignment: 9
+      pivot: {x: 0.3993679, y: 0.1707255}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: knight attack_17
-      rect:
-        serializedVersion: 2
-        x: 4352
-        y: 0
-        width: 256
-        height: 200
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: knight attack_18
+      name: knight attack (2)_12
       rect:
         serializedVersion: 2
         x: 4608
         y: 0
-        width: 256
-        height: 200
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 384
+        height: 384
+      alignment: 9
+      pivot: {x: 0.3993679, y: 0.1707255}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: knight attack_19
+      name: knight attack (2)_13
       rect:
         serializedVersion: 2
-        x: 4864
+        x: 4992
         y: 0
-        width: 256
-        height: 200
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 384
+        height: 384
+      alignment: 9
+      pivot: {x: 0.3993679, y: 0.1707255}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: knight attack_20
-      rect:
-        serializedVersion: 2
-        x: 5120
-        y: 0
-        width: 256
-        height: 200
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-    - serializedVersion: 2
-      name: knight attack_21
+      name: knight attack (2)_14
       rect:
         serializedVersion: 2
         x: 5376
         y: 0
-        width: 256
-        height: 200
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 384
+        height: 384
+      alignment: 9
+      pivot: {x: 0.3993679, y: 0.1707255}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: knight attack_22
+      name: knight attack (2)_15
       rect:
         serializedVersion: 2
-        x: 5632
+        x: 5760
         y: 0
-        width: 256
-        height: 200
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 384
+        height: 384
+      alignment: 9
+      pivot: {x: 0.3993679, y: 0.1707255}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: knight attack_23
+      name: knight attack (2)_16
       rect:
         serializedVersion: 2
-        x: 5888
+        x: 6144
         y: 0
-        width: 256
-        height: 200
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        width: 384
+        height: 384
+      alignment: 9
+      pivot: {x: 0.3993679, y: 0.1707255}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: knight attack (2)_17
+      rect:
+        serializedVersion: 2
+        x: 6528
+        y: 0
+        width: 384
+        height: 384
+      alignment: 9
+      pivot: {x: 0.3993679, y: 0.1707255}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: knight attack (2)_18
+      rect:
+        serializedVersion: 2
+        x: 6912
+        y: 0
+        width: 384
+        height: 384
+      alignment: 9
+      pivot: {x: 0.3993679, y: 0.1707255}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: knight attack (2)_19
+      rect:
+        serializedVersion: 2
+        x: 7296
+        y: 0
+        width: 384
+        height: 384
+      alignment: 9
+      pivot: {x: 0.3993679, y: 0.1707255}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: knight attack (2)_20
+      rect:
+        serializedVersion: 2
+        x: 7680
+        y: 0
+        width: 384
+        height: 384
+      alignment: 9
+      pivot: {x: 0.3993679, y: 0.1707255}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []

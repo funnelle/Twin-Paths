@@ -18,14 +18,13 @@ public class Knight_Attack : MonoBehaviour {
 	}
 
 	public void KnightAttack() {
-		sword.enabled = true;
 		StartCoroutine (AttackLength (attackTime));
 	}
 
 	private IEnumerator AttackLength (float attackTime) {
 		yield return new WaitForSeconds (attackTime);
-		sword.enabled = false;
 		anim.SetBool ("Attack", false);
+		knight.canAttack = true;
 		knight.allowedMovement = true;
 	}
 
