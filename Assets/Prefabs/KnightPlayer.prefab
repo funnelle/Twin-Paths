@@ -179,6 +179,7 @@ MonoBehaviour:
   health: 2
   jumpForce: 1
   allowedMovement: 1
+  canAttack: 1
   horizontalButton: Horizontal_p2
   jumpButton: Jump_p2
   attackButton: Attack_p2
@@ -194,7 +195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8295c46070e74494dbcd3779ebef9c57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackTime: 1
+  attackTime: 2
   rogue: {fileID: 0}
 --- !u!212 &212284233570977964
 SpriteRenderer:

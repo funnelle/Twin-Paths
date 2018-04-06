@@ -344,6 +344,11 @@ Prefab:
       propertyPath: whatIsGround.m_Bits
       value: 16896
       objectReference: {fileID: 0}
+    - target: {fileID: 114274188114893040, guid: 36fe46911bda94dc28faa90c44d7f924,
+        type: 2}
+      propertyPath: dashDelay
+      value: 0.3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 36fe46911bda94dc28faa90c44d7f924, type: 2}
   m_IsPrefabParent: 0
