@@ -180,7 +180,6 @@ public class RogueController : MonoBehaviour {
 		canAttack = false;
 		canDash = false;
 		Debug.Log ("Attacking");
-		SoundManagerScript.PlaySound ("Rogue Attack");
 		StartCoroutine(AttackLength (attackTime));
 		anim.SetBool ("Attack", false);
 	}
@@ -198,6 +197,7 @@ public class RogueController : MonoBehaviour {
 		}
 		float distance = 0.4f;
 		RaycastHit2D hit = Physics2D.Raycast (position, direction, distance, Enemy);
+		SoundManagerScript.PlaySound ("Rogue Attack");
 
 		if (hit.collider != null) {
 			KnightController knightHit = knight.GetComponent<KnightController> ();
