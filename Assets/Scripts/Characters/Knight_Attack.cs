@@ -11,9 +11,9 @@ public class Knight_Attack : MonoBehaviour {
 	public GameObject rogue;
 
 	// Used for interacting with hearts in UI Overlay
-	public GameObject UIOverlay;
-	public GameObject heartFull;
-	public GameObject heartEmpty;
+	private GameObject UIOverlay;
+	private GameObject heartFull;
+	private GameObject heartEmpty;
 
 	void Awake() {
 		sword = GetComponent<BoxCollider2D> ();
