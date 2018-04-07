@@ -150,19 +150,23 @@ MonoBehaviour:
   health: 1
   wall:
     serializedVersion: 2
-    m_Bits: 2048
+    m_Bits: 2560
+  allowedMovement: 1
   Enemy:
     serializedVersion: 2
     m_Bits: 16384
   attackTime: 0.5
   canAttack: 1
+  canDash: 1
   dashDistance: {x: 3, y: 0}
   dashTime: 0.5
+  dashDelay: 0.3
+  delayDone: 1
   grounded: 0
   groundCheck: {fileID: 4793896243346828}
   whatIsGround:
     serializedVersion: 2
-    m_Bits: 4294967039
+    m_Bits: 16896
   jumpForce: 550
   horizontalButton: Horizontal_P1
   jumpButton: Jump
