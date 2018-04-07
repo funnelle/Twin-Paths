@@ -21,10 +21,10 @@ public class Knight_Attack : MonoBehaviour {
 		knight = GetComponentInParent<KnightController> ();
 		rogue = GameObject.Find("RoguePlayer");
 
-		UIOverlay = GameObject.Find("UIOverlay");
+		//UIOverlay = GameObject.Find("UIOverlay");
 
-		heartFull = UIOverlay.transform.Find("Hearts/RHeartFull1").gameObject;
-		heartEmpty = UIOverlay.transform.Find("Hearts/RHeartEmpty1").gameObject;
+		//heartFull = UIOverlay.transform.Find("Hearts/RHeartFull1").gameObject;
+		//heartEmpty = UIOverlay.transform.Find("Hearts/RHeartEmpty1").gameObject;
 	}
 
 	public void KnightAttack() {
@@ -41,8 +41,8 @@ public class Knight_Attack : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D coll) {
 		RogueController damage = rogue.GetComponent<RogueController> ();
 		if (coll.gameObject.tag == "Rogue") {
-			heartEmpty.SetActive(true);
-			heartFull.SetActive(false);
+			//heartEmpty.SetActive(true);
+			//heartFull.SetActive(false);
 			
 			damage.TakeDamage ();
 		}
