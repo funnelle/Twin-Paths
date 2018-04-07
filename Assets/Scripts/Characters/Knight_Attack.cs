@@ -10,11 +10,21 @@ public class Knight_Attack : MonoBehaviour {
 	public float attackTime;
 	public GameObject rogue;
 
+	// Used for interacting with hearts in UI Overlay
+	private GameObject UIOverlay;
+	private GameObject heartFull;
+	private GameObject heartEmpty;
+
 	void Awake() {
 		sword = GetComponent<BoxCollider2D> ();
 		anim = GetComponentInParent<Animator> ();
 		knight = GetComponentInParent<KnightController> ();
 		rogue = GameObject.Find("RoguePlayer");
+
+		UIOverlay = GameObject.Find("UIOverlay");
+
+		heartFull = UIOverlay.transform.Find("Hearts/RHeartFull1").gameObject;
+		heartEmpty = UIOverlay.transform.Find("Hearts/RHeartEmpty1").gameObject;
 	}
 
 	public void KnightAttack() {
@@ -31,6 +41,9 @@ public class Knight_Attack : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D coll) {
 		RogueController damage = rogue.GetComponent<RogueController> ();
 		if (coll.gameObject.tag == "Rogue") {
+			heartEmpty.SetActive(true);
+			heartFull.SetActive(false);
+			
 			damage.TakeDamage ();
 		}
 	}
