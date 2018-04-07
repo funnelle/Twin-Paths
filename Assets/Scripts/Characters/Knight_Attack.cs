@@ -10,6 +10,9 @@ public class Knight_Attack : MonoBehaviour {
 	public float attackTime;
 	public GameObject rogue;
 
+	public GameObject heartFull;
+	public GameObject heartEmpty;
+
 	void Awake() {
 		sword = GetComponent<BoxCollider2D> ();
 		anim = GetComponentInParent<Animator> ();
@@ -31,6 +34,8 @@ public class Knight_Attack : MonoBehaviour {
 	void OnTriggerEnter2D(Collider2D coll) {
 		RogueController damage = rogue.GetComponent<RogueController> ();
 		if (coll.gameObject.tag == "Rogue") {
+			heartEmpty.SetActive(true);
+			heartFull.SetActive (false);
 			damage.TakeDamage ();
 		}
 	}

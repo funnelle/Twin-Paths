@@ -45,10 +45,6 @@ public class RogueController : MonoBehaviour {
 	public string attackButton = "Attack";
 	public string damageButton = "Ouch";
 
-	//Heart variables
-	public GameObject heartFull;
-	public GameObject heartEmpty;
-
 	void Start() {
 		rb2d = GetComponent<Rigidbody2D> ();
 		anim = GetComponent<Animator> ();
@@ -228,8 +224,6 @@ public class RogueController : MonoBehaviour {
 		allowedMovement = false;
 		if (dash != true) {
 			health -= 1;
-			heartEmpty.SetActive(true);
-			heartFull.SetActive (false);
 			if (health <= 0) {
 				rb2d.AddForce (new Vector2 (rb2d.velocity.x, (jumpForce / 2)));
 				rogue.GetComponent<BoxCollider2D> ().enabled = false;

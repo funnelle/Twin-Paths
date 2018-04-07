@@ -69,7 +69,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1951131795465712}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.139853, y: -3.577, z: 0}
+  m_LocalPosition: {x: 4.139853, y: -3.24, z: 0}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children:
   - {fileID: 4032827572749858}
@@ -197,6 +197,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackTime: 2
   rogue: {fileID: 0}
+  heartFull: {fileID: 0}
+  heartEmpty: {fileID: 0}
 --- !u!212 &212284233570977964
 SpriteRenderer:
   m_ObjectHideFlags: 1
