@@ -8,6 +8,7 @@ public class Knight_Attack : MonoBehaviour {
 	private Animator anim;
 
 	public float attackTime;
+    public float feintTime;
 	public GameObject rogue;
 
 	public GameObject heartFull;
@@ -21,16 +22,29 @@ public class Knight_Attack : MonoBehaviour {
 	}
 
 	public void KnightAttack() {
-		StartCoroutine (AttackLength (attackTime));
+        StartCoroutine(AttackLength(attackTime));
 	}
+
+    public void KnightAttackFeint() {
+        StartCoroutine(FeintLength(feintTime));
+    }
 
 	private IEnumerator AttackLength (float attackTime) {
 		yield return new WaitForSeconds (attackTime);
 		anim.SetBool ("Attack", false);
 		knight.canAttack = true;
+        knight.canFeint = true;
 		knight.allowedMovement = true;
 	}
 
+    private IEnumerator FeintLength(float feintTime)
+    {
+        yield return new WaitForSeconds(feintTime);
+        anim.SetBool("Feint", false);
+        knight.canFeint = true;
+        knight.canAttack = true;
+        knight.allowedMovement = true;
+    }
 	void OnTriggerEnter2D(Collider2D coll) {
 		RogueController damage = rogue.GetComponent<RogueController> ();
 		if (coll.gameObject.tag == "Rogue") {

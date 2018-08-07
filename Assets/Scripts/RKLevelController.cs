@@ -92,7 +92,7 @@ public class  RKLevelController : MonoBehaviour {
 					return true;
 				}
 			}
-			catch (ArgumentOutOfRangeException e)
+			catch (ArgumentOutOfRangeException)
 			{
 				Debug.Log("Must be at the end of stages (left or right)");
 
@@ -109,7 +109,7 @@ public class  RKLevelController : MonoBehaviour {
 					return true;
 				}
 			}
-			catch (ArgumentOutOfRangeException e)
+			catch (ArgumentOutOfRangeException)
 			{
 				Debug.Log("Must be at the end of stages (left or right)");
 
